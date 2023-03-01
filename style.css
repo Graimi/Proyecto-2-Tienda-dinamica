@@ -1,0 +1,676 @@
+:root {
+  /* COLOR PALETTE */
+  --bc__color--transparent: transparent;
+  --bc__color--black: #191800;
+  --bc__color--yellow: #dbd748;
+  --bc__color--white: #f2f2f2;
+  --bc__color--white--light: #fffffe;
+  --bc__color--grey: #c3c6ce;
+  --bc__color--grey--dark: #6e6e73;
+  --bc__color--green: #25d366;
+
+  /* TYPOGRAPHY FAMILY*/
+  --bc__typography--family--heading: 'Antonio', sans-serif;
+  --bc__typography--family--body: 'Rubik', sans-serif;
+
+  /* FONT SIZE */
+  --bc__typography--size--p: 0.8rem;
+  --bc__typography--size--h3: 1.2rem;
+  --bc__typography--size--h2: 1.5rem;
+  --bc__typography--size--h1: 2rem;
+  --bc__typography--size--extra: 5rem;
+
+  /* FONT WEIGHT*/
+  --bc__typography--weight--300: 300;
+  --bc__typography--weight--500: 500;
+  --bc__typography--weight--700: 700;
+
+  /* LETTER SPACING */
+  --bc__typography--spacing--content: 0.05rem;
+
+  /* TEXT STROKE STYLE */
+  --bc__text__stroke--white: 0.04rem var(--bc__color--white);
+  --bc__text__stroke--black: 0.04rem var(--bc__color--black);
+  --bc__text__stroke--yellow: 0.04rem var(--bc__color--yellow);
+
+  /* GENERAL STYLE */
+  --bc__style--none: none;
+
+  /* GENERAL % SIZING */
+  --bc__empty: 0%;
+  --bc__half: 50%;
+  --bc__complete: 100%;
+
+  /* MARGIN */
+  --bc__margin--small: 0.5rem;
+
+  /* GAP */
+  --bc__gap--small: 0.7rem;
+  --bc__gap--medium: 1.5rem;
+  --bc__gap--big: 3rem;
+
+  /* PADDING */
+  --bc__padding--small: 0.5rem;
+  --bc__padding--medium: 1rem;
+  --bc__padding--big: 1.5rem;
+
+  /* BORDER */
+  --bc__border--yellow: 0.12rem solid var(--bc__color--yellow);
+  --bc__border--black: 0.12rem solid var(--bc__color--black);
+  --bc__border--grey: 0.12rem solid var(--bc__color--grey);
+
+  /* BORDER RADIUS */
+  --bc__border__radius--small: 0.5rem;
+  --bc__border__radius--big: 1.5rem;
+
+  /* HEIGHT */
+  --bc__height--small: 2.5rem;
+  --bc__height--card: 18rem;
+  --bc__height--header: 12vh;
+  --bc__height--footer: 35vh;
+  --bc__height--hero: 88vh;
+  --bc__height--full--screen: 100vh;
+
+  /* WIDTH */
+  --bc__width--small: 2.5rem;
+}
+
+/* 
+🟥 - Falta código
+🟨 - Revisar descripciones y variables
+✅ - Código hecho y revisado
+*/
+/* --✅0.GLOBAL STYLES------------------------------------------------------------------------ */
+/* Se establecen los diferentes estilos generales normalmente predefinidos y comunes */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 20rem;
+  min-height: var(--bc__height--full--screen);
+  margin: 0 auto;
+  color: var(--bc__color--white);
+  font-family: var(--bc__typography--family--body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: var(--bc__complete);
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: var(--bc__typography--spacing--content);
+}
+
+p {
+  font-family: var(--bc__typography--family--body);
+}
+
+a {
+  color: var(--bc__color--white);
+  text-decoration: var(--bc__style--none);
+  list-style-type: var(--bc__style--none);
+  cursor: pointer;
+}
+
+ul,
+li {
+  text-decoration: var(--bc__style--none);
+  list-style-type: var(--bc__style--none);
+}
+
+/* ✅0.1.Layout */
+/* Se dejan predefinidos los siguientes apartados para evitar repetirlos */
+.bc__layout__flex {
+  display: flex;
+  align-items: center;
+}
+
+.bc__layout__grid {
+  display: grid;
+  align-items: center;
+}
+
+/* --✅1.HEADER------------------------------------------------------------------------ */
+/* Diseños específicos del header */
+.bc__section__header__layout {
+  justify-content: space-around;
+  text-transform: uppercase;
+  font-size: var(--bc__typography--size--h3);
+  font-weight: var(--bc__typography--weight--500);
+  word-spacing: var(--bc__typography--spacing--content);
+  background-color: var(--bc__color--black);
+  min-height: var(--bc__height--header);
+  padding: var(--bc__padding--big);
+}
+
+/* Diseños para poner el nombre del logo hueco */
+.bc__header__logo {
+  -webkit-text-stroke: var(--bc__text__stroke--white);
+  color: var(--bc__color--transparent);
+}
+
+/* Diseños para la navbar en desktop */
+.bc__navbar__header {
+  flex-direction: row;
+  gap: var(--bc__gap--medium);
+}
+
+/* Diseño para quitar la hamburguesa, estamos en desktop first */
+.bc__hamburguer__label,
+.bc__hamburguer {
+  display: var(--bc__style--none);
+}
+
+/* ✅1.1.Contact button */
+/* Diseños específicos para el efecto de la palabra Contacto */
+
+/* Dando estilos específicos al botón */
+.bc__contact__button {
+  position: relative;
+  font-size: var(--bc__typography--size--h3);
+  text-transform: uppercase;
+  background: var(--bc__color--transparent);
+  border: var(--bc__style--none);
+}
+
+/* Aplicando por defecto el color blanco */
+.bc__contact__text--plain {
+  color: var(--bc__color--white);
+}
+
+/* Los estilos del texto cuando se realiza el hover */
+.bc__contact__text--hover {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  -webkit-text-stroke: var(--bc__text__stroke--yellow);
+  color: var(--bc__color--transparent);
+  width: var(--bc__empty);
+  border-right: 0.2rem double var(--bc__color--yellow);
+  inset: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+/* HOVER -> Acción para mover la doble raya */
+.bc__contact__button:hover .bc__contact__text--hover {
+  width: var(--bc__complete);
+}
+
+/* HOVER -> Para no superponer el color anterior */
+.bc__contact__button:hover .bc__contact__text--plain {
+  color: var(--bc__color--transparent);
+}
+
+/* --✅2.MAIN------------------------------------------------------------------------ */
+/* Se establece el color de fondo del main */
+.bc__section__main {
+  background-color: var(--bc__color--white);
+}
+
+/* ✅2.1.Hero */
+/* Diseños generales, con el z-index conseguimos ocultar el botón whatsApp */
+.bc__section__hero {
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+  background-image: url(https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605857/ceres-box/ring_bfgytd.jpg);
+  background-size: cover;
+  min-height: var(--bc__height--hero);
+  padding: var(--bc__padding--big);
+  position: relative;
+  z-index: 1;
+}
+
+/* Se aplica el filtro para mejorar la visualización */
+.bc__hero__logo {
+  width: 10rem;
+  filter: drop-shadow(0 0 0.5rem var(--bc__color--black));
+}
+
+/* Estilos específicos del texto principal */
+.bc__hero__description {
+  font-size: var(--bc__typography--size--extra);
+  font-weight: var(--bc__typography--weight--500);
+  -webkit-text-stroke: var(--bc__text__stroke--white);
+  color: var(--bc__color--white);
+  filter: drop-shadow(0 0 0.5rem var(--bc__color--yellow));
+  max-width: 90%;
+}
+
+/* Estilos específicos del CTA */
+.bc__hero__CTA {
+  text-align: center;
+  font-size: var(--bc__typography--size--h3);
+  word-spacing: var(--bc__typography--spacing--content);
+  background-color: var(--bc__color--yellow);
+  color: var(--bc__color--black);
+  padding: var(--bc__padding--medium);
+  border-radius: var(--bc__border__radius--small);
+}
+
+/* Se aplica el filtro para mejorar la visualización */
+.bc__hero__next {
+  width: var(--bc__width--small);
+  filter: drop-shadow(0 0 0.5rem var(--bc__color--black));
+}
+
+/* ✅2.2.SHOP */
+/* Estilos generales */
+.bc__section__shop {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  min-height: var(--bc__height--full--screen);
+  padding: 2.5rem 5rem;
+  gap: var(--bc__gap--big);
+}
+
+/* Espacio aplicado para que solo quepan 3 cards en la pantalla */
+.bc__product {
+  display: flex;
+  justify-content: center;
+  flex-basis: 26%;
+}
+
+/* Estilos generales de las cards */
+.bc__product--card {
+  position: relative;
+  width: var(--bc__height--card);
+  height: 33rem;
+  border-radius: var(--bc__border__radius--big);
+  background: var(--bc__color--white--light);
+  padding: var(--bc__padding--big);
+  transition: 0.5s ease-out;
+  overflow: visible;
+}
+
+/* Estilos generales del contenido de las cards */
+.bc__card--details {
+  display: grid;
+  place-content: center;
+  align-content: space-between;
+  color: var(--bc__color--black);
+  height: var(--bc__complete);
+  gap: var(--bc__gap--small);
+  cursor: pointer;
+}
+
+/* Estilos del título */
+.bc__card--title {
+  font-size: var(--bc__typography--size--h1);
+  font-weight: var(--bc__typography--weight--700);
+  font-family: var(--bc__typography--family--heading);
+  font-style: italic;
+  -webkit-text-stroke: var(--bc__text__stroke--black);
+  color: var(--bc__color--yellow);
+  cursor: pointer;
+}
+
+/* Estilo del logo de la marca */
+.bc__brand {
+  width: 3.5rem;
+}
+
+/* Tamaño de la imagen del producto */
+.bc__product--image {
+  width: 15rem;
+}
+
+/* Estilos del precio y peso (oz) */
+.bc__card--body {
+  justify-content: space-between;
+  font-size: var(--bc__typography--size--h2);
+  font-weight: var(--bc__typography--weight--300);
+  font-family: var(--bc__typography--family--body);
+  color: var(--bc__color--grey--dark);
+  cursor: pointer;
+}
+
+/* Para que el pointer aparezca sobre el contenido de la carta el cual contiene el hipervínculo */
+.bc__card--body > p {
+  cursor: pointer;
+}
+
+/* Estilos de base del botón, ocultados hasta hacer hover */
+.bc__card--button {
+  transform: translate(-50%, 125%);
+  width: 30%;
+  border-radius: var(--bc__border__radius--big);
+  border: var(--bc__style--none);
+  background-color: var(--bc__color--yellow);
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem;
+  position: absolute;
+  left: var(--bc__half);
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+}
+
+/* Tamaño del logo de compra */
+.bc__card--button__image {
+  width: var(--bc__width--small);
+}
+
+/* HOVER -> Efecto aplicado al borde del card */
+.bc__product--card:hover {
+  border: 0.1rem solid var(--bc__color--yellow);
+  box-shadow: 0 0.25rem 1.1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+/* HOVER -> En la card aparece el botón de compra */
+.bc__product--card:hover .bc__card--button {
+  transform: translate(-50%, var(--bc__half));
+  opacity: 1;
+}
+
+/* --✅3.FOOTER------------------------------------------------------------------------ */
+/* Estilos generales */
+.bc__section__footer {
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  min-height: var(--bc__height--footer);
+  padding: var(--bc__padding--big);
+  gap: var(--bc__gap--small);
+  font-size: var(--bc__typography--size--p);
+  font-weight: var(--bc__typography--weight--300);
+  color: var(--bc__color--yellow);
+  background-image: url(https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605856/ceres-box/footer_zwwxpn.png);
+  background-color: var(--bc__color--white);
+  background-size: cover;
+  background-position-x: center;
+}
+
+/* Estilos específicos sobre la info del gym */
+.bc__footer__web {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0.3rem;
+  gap: var(--bc__gap--small);
+  border-bottom: var(--bc__color--yellow) 0.1rem solid;
+}
+
+/* Estilos individuales de los grupos ubicación, teléfono e instagram */
+.bc__footer__location,
+.bc__contact__phone,
+.bc__contact__instagram {
+  flex-direction: row;
+  gap: var(--bc__gap--small);
+}
+
+/* Dirección del texto en desktop first */
+.bc__location__address {
+  text-align: right;
+}
+
+/* Estilo del texto Kike de Manuel */
+.bc__slogan__boxer {
+  text-align: center;
+  font-size: var(--bc__typography--size--h3);
+  -webkit-text-stroke: var(--bc__text__stroke--yellow);
+  color: var(--bc__color--transparent);
+}
+
+/* Estilo del eslogan */
+.bc__slogan__text {
+  background-color: var(--bc__color--yellow);
+  color: var(--bc__color--black);
+  padding: var(--bc__padding--small);
+  border-radius: var(--bc__border__radius--small);
+  text-align: center;
+}
+
+/* Padding de los iconos del footer */
+.bc__contact__phone,
+.bc__footer__location,
+.bc__contact__instagram,
+.bc__social__linkedin,
+.bc__social__github {
+  padding: var(--bc__padding--small);
+}
+
+/* --✅4.WHATSAPP BUTTON------------------------------------------------------------------------ */
+/* Diseños generales */
+.bc__button--whatsApp {
+  position: fixed;
+  bottom: 3vh;
+  left: 3vh;
+  height: var(--bc__height--small);
+  width: var(--bc__width--small);
+  background-color: var(--bc__color--green);
+  border-radius: var(--bc__half);
+  box-shadow: 0.03rem 0.03rem 0.4rem rgb(60 60 60 / 40%);
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+  transition: all 0.2s;
+}
+
+/* HOVER -> Efecto aumento */
+.bc__button--whatsApp:hover {
+  transform: scale(1.1);
+}
+
+/* Icono de WhatsApp */
+.bc__whatsApp__img {
+  position: absolute;
+  width: 70%;
+  top: 16%;
+  left: 20%;
+}
+
+/* --🟨5.MEDIA QUERIES------------------------------------------------------------------------ */
+
+/* TABLET DISPLAY */
+@media screen and (min-width: 23.5rem) and (max-width: 48rem) {
+  /* --✅1.HEADER------------------------------------------------------------------------ */
+  /* Se cambia el display del header para adapatarlo a tablet */
+  .bc__section__header__layout {
+    display: block;
+    min-height: 5vh;
+  }
+
+  /* Se centra el texto del logo */
+  .bc__header__logo {
+    text-align: center;
+    margin: auto;
+  }
+
+  /* Se fija "a mano" la posición de la hamburguesa */
+  .bc__hamburguer__label {
+    display: block;
+    position: absolute;
+    top: 1.43rem;
+    right: 3.5rem;
+  }
+
+  /* Por defecto la nav no se ve */
+  .bc__section__navbar {
+    display: var(--bc__style--none);
+  }
+
+  /* CHECKED -> Aparece la nav */
+  .bc__hamburguer:checked + .bc__section__navbar {
+    display: block;
+    padding: var(--bc__padding--big);
+  }
+
+  /* Dirección de los items del nav */
+  .bc__navbar__header {
+    flex-direction: column;
+  }
+
+  /* --✅2.MAIN------------------------------------------------------------------------ */
+
+  /* ✅2.1.HERO */
+  /* Se aumenta tamaño hero para compensar el header más pequeño*/
+  .bc__section__hero {
+    min-height: 91vh;
+  }
+
+  /* Se reduce el tamaño del logo */
+  .bc__hero__logo {
+    width: 8rem;
+  }
+
+  /* Se reduce el tamaño del texto */
+  .bc__hero__description {
+    font-size: calc(var(--bc__typography--size--extra) - 1rem);
+    font-weight: var(--bc__typography--weight--500);
+  }
+
+  /* Se reduce el tamaño del CTA */
+  .bc__hero__CTA {
+    font-size: calc(var(--bc__typography--size--h3) - 0.25rem);
+  }
+
+  /* Se reduce el tamaño del icono next */
+  .bc__hero__next {
+    width: calc(var(--bc__width--small) - 0.25rem);
+  }
+
+  /* --✅3.FOOTER------------------------------------------------------------------------ */
+  /* Se cambia el display del footer para adapatarlo a tablet */
+  .bc__footer__web {
+    display: flex;
+    flex-direction: column;
+    margin: var(--bc__margin--small);
+  }
+
+  /* Estilos específicos de los grupos del footer */
+
+  .bc__footer__location {
+    flex-direction: column-reverse;
+    text-align: center;
+    order: 1;
+    margin-top: var(--bc__margin--small);
+  }
+
+  .bc__footer__contact {
+    display: flex;
+  }
+
+  .bc__location__address {
+    text-align: center;
+  }
+
+  /* Se establece el order para que prevalezca en la parte superior el eslogan */
+  .bc__footer__slogan {
+    order: 0;
+  }
+
+  .bc__footer__contact {
+    order: 2;
+  }
+
+  .bc__contact__phone,
+  .bc__contact__instagram {
+    flex-direction: column;
+    margin: var(--bc__margin--small);
+  }
+}
+
+/* MOBILE DISPLAY */
+@media screen and (max-width: 23.5rem) {
+  /* --✅1.HEADER------------------------------------------------------------------------ */
+  /* Se cambia la dirección del header para adapatarlo a movil */
+  .bc__section__header__layout {
+    flex-direction: column;
+    gap: var(--bc__gap--medium);
+  }
+
+  /* Se fija la posición de la hamburguesa */
+  .bc__hamburguer__label {
+    display: inline-block;
+  }
+
+  /* Por defecto la nav no se ve */
+  .bc__section__navbar {
+    display: var(--bc__style--none);
+  }
+
+  /* CHECKED -> Aparece la nav */
+  .bc__hamburguer:checked ~ .bc__section__navbar {
+    display: block;
+  }
+
+  /* Dirección de los items del nav */
+  .bc__navbar__header {
+    flex-direction: column;
+  }
+
+  /* --✅2.MAIN------------------------------------------------------------------------ */
+
+  /* ✅2.1.HERO */
+  /* Se reduce el tamaño del logo */
+  .bc__hero__logo {
+    width: 7rem;
+  }
+
+  /* Se reduce el tamaño del texto */
+  .bc__hero__description {
+    font-size: calc(var(--bc__typography--size--extra) - 2rem);
+    font-weight: var(--bc__typography--weight--500);
+  }
+
+  /* Se reduce el tamaño del CTA */
+  .bc__hero__CTA {
+    font-size: calc(var(--bc__typography--size--h3) - 0.48rem);
+  }
+
+  /* Se reduce el tamaño del next */
+  .bc__hero__next {
+    width: calc(var(--bc__width--small) - 0.5rem);
+  }
+
+  /* --✅3.FOOTER------------------------------------------------------------------------ */
+  /* Se cambia el display del footer para adapatarlo a movil */
+  .bc__footer__web {
+    display: flex;
+    flex-direction: column;
+    margin: var(--bc__margin--small);
+  }
+
+  /* Estilos específicos de los grupos del footer */
+
+  .bc__footer__location {
+    flex-direction: column-reverse;
+    text-align: center;
+    order: 1;
+    margin-top: var(--bc__margin--small);
+  }
+
+  .bc__location__address {
+    text-align: center;
+  }
+
+  /* Se establece el order para que prevalezca en la parte superior el eslogan */
+  .bc__footer__slogan {
+    order: 0;
+  }
+
+  .bc__footer__contact {
+    order: 2;
+  }
+
+  .bc__contact__phone,
+  .bc__contact__instagram {
+    flex-direction: column;
+    margin: var(--bc__margin--small);
+  }
+}
