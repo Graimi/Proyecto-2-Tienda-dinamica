@@ -46,6 +46,7 @@
 <li><u>PROYECTO PERSONAL</u> -> Desarrollar a futuro toda la página web completa como se ha previsto en Canva (gimnasio y no tienda) en React </li>
 [] Crear el borrador de la página web completa en Canva <a href="https://www.canva.com/design/DAFae41XcOs/view">link</a>
 [] En el <link rel="canonical" href="#"> Establecer la URL cacnónica <br>
+[] Probar con video de instalaciones en banner, establecer en formato banner, quitar precios finales, meter logo de nuevo, reducir velocidad y poner en blanco y negro <br>
 [] Identificar los nuevos componentes a añadir <br>
 [] Añadir botón whats oficial <!--<g clip-path="url(#_clipPath_A3g8G5hPEGG2L0B6hFCxamU4cc8rfqzQ)">" -->
 https://api.whatsapp.com/send?phone=34605895354&text=Buenas!%20Te%20gustar%C3%ADa%20reservar%20una%20clase%3F%0AMira%20nuestro%20horario%20y%20haz%20tu%20mismo%20una%20propuesta%20de%20fecha%20y%20hora
