@@ -10,6 +10,20 @@ module.exports = {
     sourceType: 'module'
   },
   rules: {
-    'prettier/prettier': 'error'
+    // El método para indicar las reglas normalmente es:
+    // Indicar en primera instancia el nivel de alerta ya sea 0 = 'off', 1 = 'warn', 2 = 'error'
+    // Y a partir de ahí a que lo vamos a aplicar dependiendo de si es solo a un apartado o varios, ver siguientes reglas
+    'prettier/prettier': 'error',
+    // Con la siguiente restricción evitamos que nos indique el uso de for of no es buena opción
+    // Se ha investigado en la red y es buena opción de hecho
+    'no-restricted-syntax': ['off', 'ForOfStatement'],
+    // Con esta restricción indicamos que no nos alerte cuando escribamos la extensión de alguno de los siguientes archivos
+    'import/extensions': [
+      'off',
+      {
+        js: 'never'
+      }
+    ]
   }
+  // 'no-restricted-syntax': 'ForOfStatement'
 };
