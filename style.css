@@ -10,7 +10,8 @@
   --bc__color--green: #25d366;
 
   /* TYPOGRAPHY FAMILY*/
-  --bc__typography--family--heading: 'Antonio', sans-serif;
+  /* --bc__typography--family--heading: 'Antonio', sans-serif; */
+  --bc__typography--family--heading: 'College_Block_2.0';
   --bc__typography--family--body: 'Rubik', sans-serif;
 
   /* FONT SIZE */
@@ -29,7 +30,7 @@
   --bc__typography--spacing--content: 0.05rem;
 
   /* TEXT STROKE STYLE */
-  --bc__text__stroke--white: 0.04rem var(--bc__color--white);
+  --bc__text__stroke--white: 0.01em var(--bc__color--white);
   --bc__text__stroke--black: 0.04rem var(--bc__color--black);
   --bc__text__stroke--yellow: 0.04rem var(--bc__color--yellow);
 
@@ -68,12 +69,19 @@
   --bc__height--card: 18rem;
   --bc__height--header: 12vh;
   --bc__height--footer: 35vh;
-  --bc__height--hero: 88vh;
+  --bc__height--hero: 100vh;
   --bc__height--full--screen: 100vh;
 
   /* WIDTH */
   --bc__width--small: 2.5rem;
 }
+
+@font-face {
+  font-family: "College_Block_2.0";
+  src: url("./College_Block_2.0.otf"),
+       url("ruta-a-la-version-woff-de-la-fuente") format("woff");
+}
+
 
 /* 
 🟥 - Falta código
@@ -146,8 +154,8 @@ li {
 /* Para hacer fijo el header en la parte superior */
 .bc__section__header {
   position: fixed;
-  width: 100%;
-  top: 0rem;
+  width: var(--bc__complete);
+  top: var(--bc__empty);
   z-index: 2;
 }
 /* Diseños específicos del header */
@@ -157,13 +165,16 @@ li {
   font-size: var(--bc__typography--size--h3);
   font-weight: var(--bc__typography--weight--500);
   word-spacing: var(--bc__typography--spacing--content);
-  background-color: var(--bc__color--black);
   min-height: var(--bc__height--header);
   padding: var(--bc__padding--big);
+  /* Con lo siguiente preparamos la invisible navbar junto con JS */
+  background-color: var(--bc__color--transparent);
+  transition: background-color 0.3s ease-in-out;
 }
 
 /* Diseños para poner el nombre del logo hueco */
 .bc__header__logo {
+  font-family: 'College_Block_2.0';
   -webkit-text-stroke: var(--bc__text__stroke--white);
   color: var(--bc__color--transparent);
 }
@@ -244,7 +255,7 @@ li {
 
 /* Se aplica el filtro para mejorar la visualización */
 .bc__hero__logo {
-  width: 10rem;
+  width: 15rem;
   filter: drop-shadow(0 0 0.5rem var(--bc__color--black));
 }
 
