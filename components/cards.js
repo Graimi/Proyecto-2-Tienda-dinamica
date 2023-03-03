@@ -17,7 +17,7 @@ const cardDetails = (products) => {
           <h2 class="bc__card--title">${product.name}</h2>
           <img
             class="bc__brand"
-            src=${product.brand_img}
+            src=${product.seller_img}
             alt="logo de la marca"
           />
           <img

@@ -1,3 +1,3 @@
-import shop from './pages/shop/shop.js';
+import shop from './pages/shop.js';
 
 shop();

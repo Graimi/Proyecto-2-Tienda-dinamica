@@ -1,8 +1,8 @@
 const data = [
   {
     name: 'LOMA',
-    brand: 'venum',
-    brand_img:
+    seller: 'venum',
+    seller_img:
       'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605856/ceres-box/venum.svg_o2hcyc.png',
     img: 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605855/ceres-box/venum_loma_sjpvcc.png',
     price: 320,
@@ -11,8 +11,8 @@ const data = [
   },
   {
     name: 'RAJADAMNERN',
-    brand: 'venum',
-    brand_img:
+    seller: 'venum',
+    seller_img:
       'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605856/ceres-box/venum.svg_o2hcyc.png',
     img: 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605855/ceres-box/venum_RAJADAMNERN_iuzn72.png',
     price: 100,
@@ -21,8 +21,8 @@ const data = [
   },
   {
     name: 'NAVY',
-    brand: 'venum',
-    brand_img:
+    seller: 'venum',
+    seller_img:
       'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605856/ceres-box/venum.svg_o2hcyc.png',
     img: 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605856/ceres-box/venum_navy_fnu7as.png',
     price: 90,
@@ -31,8 +31,8 @@ const data = [
   },
   {
     name: 'DRAGON',
-    brand: 'venum',
-    brand_img:
+    seller: 'venum',
+    seller_img:
       'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605856/ceres-box/venum.svg_o2hcyc.png',
     img: 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605855/ceres-box/venum_dragon_juvmfs.png',
     price: 90,
@@ -41,8 +41,8 @@ const data = [
   },
   {
     name: '1910',
-    brand: 'everlast',
-    brand_img:
+    seller: 'everlast',
+    seller_img:
       'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605856/ceres-box/everlast_ahtmaz.png',
     img: 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605854/ceres-box/everlast_1910_yfte09.png',
     price: 200,
@@ -51,8 +51,8 @@ const data = [
   },
   {
     name: 'ELITE',
-    brand: 'everlast',
-    brand_img:
+    seller: 'everlast',
+    seller_img:
       'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605856/ceres-box/everlast_ahtmaz.png',
     img: 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605854/ceres-box/everlast_elite_qnmggz.png',
     price: 150,
@@ -61,8 +61,8 @@ const data = [
   },
   {
     name: 'POWERLOCK 2',
-    brand: 'everlast',
-    brand_img:
+    seller: 'everlast',
+    seller_img:
       'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605856/ceres-box/everlast_ahtmaz.png',
     img: 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605856/ceres-box/everlast_powerlock2_yntwoj.png',
     price: 100,
@@ -71,8 +71,8 @@ const data = [
   },
   {
     name: 'TITAN',
-    brand: 'everlast',
-    brand_img:
+    seller: 'everlast',
+    seller_img:
       'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605856/ceres-box/everlast_ahtmaz.png',
     img: 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605857/ceres-box/everlast_titan_bth3ue.png',
     price: 40,
@@ -81,8 +81,8 @@ const data = [
   },
   {
     name: 'REVO PERFORMANCE',
-    brand: 'leone',
-    brand_img:
+    seller: 'leone',
+    seller_img:
       'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605856/ceres-box/leone_cswxr4.png',
     img: 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605857/ceres-box/leone_revoPerformance_iis7hf.png',
     price: 140,
@@ -91,8 +91,8 @@ const data = [
   },
   {
     name: 'AUTHENTIC',
-    brand: 'leone',
-    brand_img:
+    seller: 'leone',
+    seller_img:
       'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605856/ceres-box/leone_cswxr4.png',
     img: 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605856/ceres-box/leone_authentic_iuybce.png',
     price: 110,
@@ -101,8 +101,8 @@ const data = [
   },
   {
     name: 'LEGIONARIUS',
-    brand: 'leone',
-    brand_img:
+    seller: 'leone',
+    seller_img:
       'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605856/ceres-box/leone_cswxr4.png',
     img: 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605856/ceres-box/leone_legionarivs_rql4kp.png',
     price: 70,
@@ -111,8 +111,8 @@ const data = [
   },
   {
     name: 'MILITAR',
-    brand: 'leone',
-    brand_img:
+    seller: 'leone',
+    seller_img:
       'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605856/ceres-box/leone_cswxr4.png',
     img: 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605856/ceres-box/leone_militar_rmhgol.png',
     price: 50,

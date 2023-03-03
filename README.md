@@ -32,12 +32,22 @@
 [] Usar fuente collegue block 2 (descargada) <br>
 [✅] Añadir logo original <br>
 <li> [] JAVASCRIPT </li>
+[] Crear las respectivas carpetas generales para almacenar los componentes y pages del protecto <br>
+[] Crear invisible nav <br>
+[] Header pasado a JS <br>
+[✅] Lista de productos <br>
+[] Filtro de los productos con sus respectivas medias queries <br>
+[] Main pasado a JS <br>
+[] Identificar los nuevos componentes a añadir <br>
+[] Footer pasado a JS <br>
 <li> [] HTML </li>
-[] Crear invisible nav - Notion/CSS3/DISEÑOS/Invisible nav <br>
-[] nav fija en parte superior <br>
 [] Header nombre gym con enlace al inicio de la web <br>
-[] Editar la scrollbar de la página (Ver ChatGPT) <br>
+[] Limpiar y organizar el código innecerio <br>
 <li> [] CSS </li>
+[✅] nav fija en parte superior <br>
+[] Diseño invisible nav <br>
+[] Img header: Probar con video o poner img corrediza <br>
+[] Editar la scrollbar de la página (Ver ChatGPT) <br>
 </ol>
 <br>
 
