@@ -10,8 +10,8 @@
   --bc__color--green: #25d366;
 
   /* TYPOGRAPHY FAMILY*/
-  /* --bc__typography--family--heading: 'Antonio', sans-serif; */
-  --bc__typography--family--heading: 'College_Block_2.0';
+  --bc__typography--family--heading: 'Antonio', sans-serif;
+  --bc__typography--family--logo: 'College_Block_2.0';
   --bc__typography--family--body: 'Rubik', sans-serif;
 
   /* FONT SIZE */
@@ -174,7 +174,7 @@ li {
 
 /* Diseños para poner el nombre del logo hueco */
 .bc__header__logo {
-  font-family: 'College_Block_2.0';
+  font-family: var(--bc__typography--family--logo);
   -webkit-text-stroke: var(--bc__text__stroke--white);
   color: var(--bc__color--transparent);
 }
@@ -453,6 +453,7 @@ li {
   padding: var(--bc__padding--small);
   border-radius: var(--bc__border__radius--small);
   text-align: center;
+  font-family: var(--bc__typography--family--logo);
 }
 
 /* Padding de los iconos del footer */

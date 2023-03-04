@@ -1,5 +1,5 @@
 // Aquí añadimos el template del header
-const headerSection = document.querySelector('.bc__section__header');
+const headerSection = document.querySelector('#header');
 
 headerSection.innerHTML += `<div class="bc__section__header__layout bc__layout__flex">
 <a href="#header"> <h3 class="bc__header__logo">NORBA CERES</h3> </a>

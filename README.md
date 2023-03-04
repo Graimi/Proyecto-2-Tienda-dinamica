@@ -29,17 +29,17 @@
 <ol>
 <li> [] General </li>
 [] Identificar los nuevos componentes a añadir <br>
-[] Usar fuente collegue block 2 (descargada) <br>
+[✅] Usar fuente collegue block 2 (descargada) <br>
 [✅] Añadir logo original <br>
 <li> [] JAVASCRIPT </li>
 [] Crear las respectivas carpetas generales para almacenar los componentes y pages del protecto <br>
 [] Crear invisible nav <br>
-[] Header pasado a JS <br>
+[✅] Header pasado a JS <br>
 [✅] Lista de productos <br>
 [] Filtro de los productos con sus respectivas medias queries <br>
 [] Main pasado a JS <br>
 [] Identificar los nuevos componentes a añadir <br>
-[] Footer pasado a JS <br>
+[✅] Footer pasado a JS <br>
 <li> [] HTML </li>
 [] Header nombre gym con enlace al inicio de la web <br>
 [] Limpiar y organizar el código innecerio <br>
