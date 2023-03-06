@@ -286,7 +286,31 @@ li {
   filter: drop-shadow(0 0 0.5rem var(--bc__color--black));
 }
 
-/* ✅2.2.SHOP */
+/* 2.2.SHOP */
+#shop {
+  align-items: flex-start;
+}
+
+/* 2.2.1 Filter */
+.bc__section__filter {
+  padding: var(--bc__padding--big);
+  margin: 2.5rem 0rem;
+  background-color: var(--bc__color--white--light);
+  border: 0.1rem solid;
+  border-radius: var(--bc__border__radius--small);
+  text-align: center;
+}
+
+.bc__section__filter > p {
+  -webkit-text-stroke: var(--bc__text__stroke--black);
+  color:var(--bc__color--white--light)
+}
+
+.bc__toggle__filter > button{
+  background-color: var(--bc__color--black);
+}
+
+/* ✅2.2.2 Products */
 /* Estilos generales */
 .bc__section__shop {
   justify-content: space-evenly;
