@@ -42,10 +42,10 @@
 [✅] Footer pasado a JS <br>
 <li> [] HTML </li>
 [] Header nombre gym con enlace al inicio de la web <br>
-[] Limpiar y organizar el código innecerio <br>
+[] Limpiar y organizar el código innecesario <br>
 <li> [] CSS </li>
 [✅] nav fija en parte superior <br>
-[] Diseño invisible nav <br>
+[✅] Diseño invisible nav <br>
 [] Img header: Probar con video o poner img corrediza <br>
 [] Editar la scrollbar de la página (Ver ChatGPT) <br>
 </ol>
