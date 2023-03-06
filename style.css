@@ -63,6 +63,7 @@
   /* BORDER RADIUS */
   --bc__border__radius--small: 0.5rem;
   --bc__border__radius--big: 1.5rem;
+  --bc__border__radius--filter: 0rem 0.5rem 0.5rem 0rem;
 
   /* HEIGHT */
   --bc__height--small: 2.5rem;
@@ -292,22 +293,47 @@ li {
 }
 
 /* 2.2.1 Filter */
+/* Diseños generales del filtro */
 .bc__section__filter {
   padding: var(--bc__padding--big);
   margin: 2.5rem 0rem;
   background-color: var(--bc__color--white--light);
-  border: 0.1rem solid;
-  border-radius: var(--bc__border__radius--small);
+  border-radius: var(--bc__border__radius--filter);
   text-align: center;
+  width: 15rem;
+  transition: cubic-bezier(0.2, 0.5, 0.1, 1) 1s;
 }
 
-.bc__section__filter > p {
+/* Decoración de las letras específicas de los títulos de los filtros */
+.bc__filter__brand > h2,
+.bc__filter__price > h2,
+.bc__filter__size > h2 {
   -webkit-text-stroke: var(--bc__text__stroke--black);
-  color:var(--bc__color--white--light)
+  color:var(--bc__color--white--light);
+  text-transform: uppercase;
 }
 
-.bc__toggle__filter > button{
+/* Decoración del botón para borrar el filtro */
+.bc__filter__remove--button {
+  text-transform: uppercase;
+  color:var(--bc__color--black);
+  background-color: var(--bc__color--white--light);
+  padding: 0.5rem;
+  margin-top: 1rem;
+  /* transition: ; */
+}
+
+/* Decoración general del toggle */
+.bc__filter__toggle--button {
   background-color: var(--bc__color--black);
+  width: 3rem;
+  height: 4rem;
+  border-radius: var(--bc__border__radius--filter);
+}
+
+/* Efecto al toggle */
+.bc__filter__toggle--image {
+  transition: all 1s;
 }
 
 /* ✅2.2.2 Products */
