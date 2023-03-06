@@ -2,7 +2,7 @@
 const headerSection = document.querySelector('#header');
 
 headerSection.innerHTML += `<div class="bc__section__header__layout bc__layout__flex">
-<a href="#header"> <h3 class="bc__header__logo">NORBA CERES</h3> </a>
+<a href="#hero"> <h3 class="bc__header__logo">NORBA CERES</h3> </a>
 <!--  HAMBURGUER -->
 <label class="bc__hamburguer__label" for="hamburger">&#9776;</label>
 <input type="checkbox" name="bc__hamburguer" class="bc__hamburguer" id="hamburger" />

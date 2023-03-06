@@ -41,7 +41,7 @@
 [] Identificar los nuevos componentes a añadir <br>
 [✅] Footer pasado a JS <br>
 <li> [] HTML </li>
-[] Header nombre gym con enlace al inicio de la web <br>
+[✅] Header nombre gym con enlace al inicio de la web <br>
 [] Limpiar y organizar el código innecesario <br>
 <li> [] CSS </li>
 [✅] nav fija en parte superior <br>
