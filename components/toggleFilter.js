@@ -1,4 +1,4 @@
-import filterTemplate from './filterTemplate.js';
+import filterTemplate from './FilterTemplate.js';
 
 // En este documento crearemos las funciones pertinentes del toggle del filtro haciendo que este aparezca y desaparezca
 const toggleFilterButton = document.querySelector('.bc__filter__toggle--button');

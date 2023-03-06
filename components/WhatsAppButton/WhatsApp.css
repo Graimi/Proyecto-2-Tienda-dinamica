@@ -1,0 +1,28 @@
+/* --✅4.WHATSAPP BUTTON------------------------------------------------------------------------ */
+/* Diseños generales */
+.bc__button--whatsApp {
+    position: fixed;
+    bottom: 3vh;
+    left: 3vh;
+    height: var(--bc__height--small);
+    width: var(--bc__width--small);
+    background-color: var(--bc__color--green);
+    border-radius: var(--bc__half);
+    box-shadow: 0.03rem 0.03rem 0.4rem rgb(60 60 60 / 40%);
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    transition: all 0.2s;
+  }
+  
+  /* HOVER -> Efecto aumento */
+  .bc__button--whatsApp:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Icono de WhatsApp */
+  .bc__whatsApp__img {
+    position: absolute;
+    width: 70%;
+    top: 16%;
+    left: 20%;
+  }

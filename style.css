@@ -320,7 +320,14 @@ li {
   background-color: var(--bc__color--white--light);
   padding: 0.5rem;
   margin-top: 1rem;
-  /* transition: ; */
+  transition: all 0.5s;
+  font-size: 1rem;
+  font-weight: var(--bc__typography--weight--700);
+}
+
+.bc__filter__remove :hover {
+  transform: translateY(-1px);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
 
 /* Decoración general del toggle */

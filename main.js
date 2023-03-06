@@ -1,9 +1,12 @@
-import functionInvisibleNav from './pages/header.js';
-import hero from './pages/main/hero.js';
-import toggleFilter from './components/toggleFilter.js';
-import shop from './pages/main/shop.js';
-import whatsAppButton from './components/whatsAppButton.js';
-import footer from './pages/footer.js';
+// Fallo
+// import './style.css';
+
+import functionInvisibleNav from './pages/Header.js';
+import hero from './pages/main/Hero.js';
+import filter from './pages/main/Filter.js';
+import shop from './pages/main/Shop.js';
+import whatsAppButton from './components/WhatsAppButton/WhatsApp.js';
+import footer from './pages/Footer.js';
 
 footer();
 
@@ -13,6 +16,6 @@ shop();
 
 hero();
 
-toggleFilter();
+filter();
 
 functionInvisibleNav();
