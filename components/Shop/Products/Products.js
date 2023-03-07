@@ -2,9 +2,9 @@
 import data from '../../../data/Data.js';
 import cardDetails from './Cards.js';
 
-const shop = () => {
+const products = () => {
   // Añadir aquí el resto de funciones si hay
   cardDetails(data);
 };
 
-export default shop;
+export default products;
