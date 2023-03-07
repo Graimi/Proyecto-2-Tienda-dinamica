@@ -46,7 +46,7 @@
 <li> [] CSS </li>
 [✅] nav fija en parte superior <br>
 [✅] Diseño invisible nav <br>
-[] Img header: Probar con video o poner img corrediza <br>
+[✅] Img header: corrediza <br>
 [] Editar la scrollbar de la página (Ver ChatGPT) <br>
 </ol>
 <br>
@@ -54,6 +54,7 @@
 ## A futuro
 <ul>
 <li><u>PROYECTO PERSONAL</u> -> Desarrollar a futuro toda la página web completa como se ha previsto en Canva (gimnasio y no tienda) en React </li>
+[] Img header: Probar con video o poner img corrediza <br>
 [] Crear el borrador de la página web completa en Canva <a href="https://www.canva.com/design/DAFae41XcOs/view">link</a>
 [] En el <link rel="canonical" href="#"> Establecer la URL cacnónica <br>
 [] Probar con video de instalaciones en banner, establecer en formato banner, quitar precios finales, meter logo de nuevo, reducir velocidad y poner en blanco y negro <br>

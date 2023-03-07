@@ -248,6 +248,8 @@ li {
   justify-content: space-evenly;
   background-image: url(https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605857/ceres-box/ring_bfgytd.jpg);
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   min-height: var(--bc__height--hero);
   padding: var(--bc__padding--big);
   position: relative;
