@@ -2,7 +2,7 @@
 // import './style.css';
 
 import functionInvisibleNav from './components/Header/Header.js';
-import hero from './pages/main/Hero.js';
+import hero from './components/Hero/Hero.js';
 import filter from './pages/main/Filter.js';
 import shop from './pages/main/Shop.js';
 import whatsAppButton from './components/WhatsAppButton/WhatsApp.js';
