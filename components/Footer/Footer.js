@@ -1,3 +1,5 @@
+import './Footer.css';
+
 import footerTemplate from './FooterTemplate.js';
 
 const footer = () => {
