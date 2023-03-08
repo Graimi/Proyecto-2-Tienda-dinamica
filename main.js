@@ -1,5 +1,5 @@
 // Fallo
-// import './style.css';
+import './style.css';
 
 import functionInvisibleNav from './components/Header/Header.js';
 import hero from './components/Hero/Hero.js';

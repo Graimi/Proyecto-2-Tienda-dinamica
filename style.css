@@ -347,12 +347,33 @@ li {
 
 /* Estilos a añadir cuando se seleccione una marca */
 .image__over {
-  /* display: none; */
+  display: none;
   position: absolute;
   top: auto;
   left: 0;
   z-index: 1;
 }
+
+/* OPCIÓN INPUT
+.bc__filter__seller {
+  display: none;
+}
+
+.bc__filter__seller:checked ~ .image__over{
+  display: block;
+}
+
+.bc__filter__seller--label img{
+  width: 3rem;
+  height: 3rem;
+  padding: 0.2rem;
+}
+
+Estilos a añadir cuando se seleccione una marca
+.image__over {
+  display: none;
+}
+*/
 
 /* Decoración del botón para borrar el filtro */
 .bc__filter__remove--button {
