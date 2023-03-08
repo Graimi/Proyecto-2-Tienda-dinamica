@@ -1,0 +1,108 @@
+/* ✅ */
+/* Estilos generales */
+.bc__section__shop {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    min-height: var(--bc__height--full--screen);
+    padding: calc(var(--bc__height--header) + var(--bc__padding--medium)) var(--bc__padding--medium);
+    gap: var(--bc__gap--big);
+  }
+  
+  /* Espacio aplicado para que solo quepan 3 cards en la pantalla */
+  .bc__product {
+    display: flex;
+    justify-content: center;
+    flex-basis: 26%;
+  }
+  
+  /* Estilos generales de las cards */
+  .bc__product--card {
+    position: relative;
+    width: var(--bc__height--card);
+    height: 33rem;
+    border-radius: var(--bc__border__radius--big);
+    background: var(--bc__color--white--light);
+    padding: var(--bc__padding--big);
+    transition: 0.5s ease-out;
+    overflow: visible;
+  }
+  
+  /* Estilos generales del contenido de las cards */
+  .bc__card--details {
+    display: grid;
+    place-content: center;
+    align-content: space-between;
+    color: var(--bc__color--black);
+    height: var(--bc__complete);
+    gap: var(--bc__gap--small);
+    cursor: pointer;
+  }
+  
+  /* Estilos del título */
+  .bc__card--title {
+    font-size: var(--bc__typography--size--h1);
+    font-weight: var(--bc__typography--weight--700);
+    font-family: var(--bc__typography--family--heading);
+    font-style: italic;
+    -webkit-text-stroke: var(--bc__text__stroke--black);
+    color: var(--bc__color--yellow);
+    cursor: pointer;
+  }
+  
+  /* Estilo del logo de la marca */
+  .bc__brand {
+    width: 3.5rem;
+  }
+  
+  /* Tamaño de la imagen del producto */
+  .bc__product--image {
+    width: 15rem;
+  }
+  
+  /* Estilos del precio y peso (oz) */
+  .bc__card--body {
+    justify-content: space-between;
+    font-size: var(--bc__typography--size--h2);
+    font-weight: var(--bc__typography--weight--300);
+    font-family: var(--bc__typography--family--body);
+    color: var(--bc__color--grey--dark);
+    cursor: pointer;
+  }
+  
+  /* Para que el pointer aparezca sobre el contenido de la carta el cual contiene el hipervínculo */
+  .bc__card--body > p {
+    cursor: pointer;
+  }
+  
+  /* Estilos de base del botón, ocultados hasta hacer hover */
+  .bc__card--button {
+    transform: translate(-50%, 125%);
+    width: 30%;
+    border-radius: var(--bc__border__radius--big);
+    border: var(--bc__style--none);
+    background-color: var(--bc__color--yellow);
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
+    position: absolute;
+    left: var(--bc__half);
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+  }
+  
+  /* Tamaño del logo de compra */
+  .bc__card--button__image {
+    width: var(--bc__width--small);
+  }
+  
+  /* HOVER -> Efecto aplicado al borde del card */
+  .bc__product--card:hover {
+    border: 0.1rem solid var(--bc__color--yellow);
+    box-shadow: 0 0.25rem 1.1rem 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  /* HOVER -> En la card aparece el botón de compra */
+  .bc__product--card:hover .bc__card--button {
+    transform: translate(-50%, var(--bc__half));
+    opacity: 1;
+  }

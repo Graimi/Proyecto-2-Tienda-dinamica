@@ -2,8 +2,8 @@
 /* Diseños generales */
 .bc__button--whatsApp {
     position: fixed;
-    bottom: 3vh;
-    left: 3vh;
+    bottom: 4vh;
+    left: 4vh;
     height: var(--bc__height--small);
     width: var(--bc__width--small);
     background-color: var(--bc__color--green);
