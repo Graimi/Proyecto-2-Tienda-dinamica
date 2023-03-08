@@ -1,5 +1,5 @@
 // En este caso he añadido el whatsapp button fuera de pages porque es un componente en sí
-// import './WhatsApp.css';
+import './WhatsApp.css';
 
 const whatsAppTemplate = (messageApi) => `<a
     href=${messageApi}
