@@ -1,3 +1,5 @@
+import './Hero.css';
+
 import heroTemplate from './HeroTemplate.js';
 
 const hero = () => {

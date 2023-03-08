@@ -1,4 +1,4 @@
-/* --✅1.HEADER------------------------------------------------------------------------ */
+/* ✅ */
 
 /* Para hacer fijo el header en la parte superior */
 .bc__section__header {
@@ -40,7 +40,7 @@
   display: var(--bc__style--none);
 }
 
-/* ✅1.1.Contact button */
+/* ✅ CONTACT BUTTON */
 /* Diseños específicos para el efecto de la palabra Contacto */
 
 /* Dando estilos específicos al botón */
@@ -84,7 +84,7 @@
 
 /* TABLET DISPLAY */
 @media screen and (min-width: 23.5rem) and (max-width: 48rem) {
-  /* --✅1.HEADER------------------------------------------------------------------------ */
+  /* ✅ */
   /* Se cambia el display del header para adapatarlo a tablet */
   .bc__section__header__layout {
     display: block;
@@ -124,7 +124,7 @@
 
 /* MOBILE DISPLAY */
 @media screen and (max-width: 23.5rem) {
-  /* --✅1.HEADER------------------------------------------------------------------------ */
+  /* ✅ */
   /* Se cambia la dirección del header para adapatarlo a movil */
   .bc__section__header__layout {
     flex-direction: column;

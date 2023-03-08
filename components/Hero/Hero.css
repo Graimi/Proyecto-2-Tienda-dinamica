@@ -1,0 +1,103 @@
+/* ✅ */
+/* Diseños generales, con el z-index conseguimos ocultar el botón whatsApp */
+.bc__section__hero {
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+  background-image: url(https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605857/ceres-box/ring_bfgytd.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: var(--bc__height--hero);
+  padding: var(--bc__padding--big);
+  position: relative;
+  z-index: 1;
+}
+
+/* Se aplica el filtro para mejorar la visualización */
+.bc__hero__logo {
+  width: 15rem;
+  filter: drop-shadow(0 0 0.5rem var(--bc__color--black));
+}
+
+/* Estilos específicos del texto principal */
+.bc__hero__description {
+  font-size: var(--bc__typography--size--extra);
+  font-weight: var(--bc__typography--weight--500);
+  -webkit-text-stroke: var(--bc__text__stroke--white);
+  color: var(--bc__color--white);
+  filter: drop-shadow(0 0 0.5rem var(--bc__color--yellow));
+  max-width: 90%;
+}
+
+/* Estilos específicos del CTA */
+.bc__hero__CTA {
+  text-align: center;
+  font-size: var(--bc__typography--size--h3);
+  word-spacing: var(--bc__typography--spacing--content);
+  background-color: var(--bc__color--yellow);
+  color: var(--bc__color--black);
+  padding: var(--bc__padding--medium);
+  border-radius: var(--bc__border__radius--small);
+}
+
+/* Se aplica el filtro para mejorar la visualización */
+.bc__hero__next {
+  width: var(--bc__width--small);
+  filter: drop-shadow(0 0 0.5rem var(--bc__color--black));
+}
+
+/* TABLET DISPLAY */
+@media screen and (min-width: 23.5rem) and (max-width: 48rem) {
+  /* ✅ */
+  /* Se aumenta tamaño hero para compensar el header más pequeño*/
+  .bc__section__hero {
+    min-height: 91vh;
+  }
+
+  /* Se reduce el tamaño del logo */
+  .bc__hero__logo {
+    width: 8rem;
+  }
+
+  /* Se reduce el tamaño del texto */
+  .bc__hero__description {
+    font-size: calc(var(--bc__typography--size--extra) - 1rem);
+    font-weight: var(--bc__typography--weight--500);
+  }
+
+  /* Se reduce el tamaño del CTA */
+  .bc__hero__CTA {
+    font-size: calc(var(--bc__typography--size--h3) - 0.25rem);
+  }
+
+  /* Se reduce el tamaño del icono next */
+  .bc__hero__next {
+    width: calc(var(--bc__width--small) - 0.25rem);
+  }
+}
+
+/* MOBILE DISPLAY */
+@media screen and (max-width: 23.5rem) {
+  /* ✅ */
+  /* Se reduce el tamaño del logo */
+  .bc__hero__logo {
+    width: 7rem;
+  }
+
+  /* Se reduce el tamaño del texto */
+  .bc__hero__description {
+    font-size: calc(var(--bc__typography--size--extra) - 2rem);
+    font-weight: var(--bc__typography--weight--500);
+  }
+
+  /* Se reduce el tamaño del CTA */
+  .bc__hero__CTA {
+    font-size: calc(var(--bc__typography--size--h3) - 0.48rem);
+  }
+
+  /* Se reduce el tamaño del next */
+  .bc__hero__next {
+    width: calc(var(--bc__width--small) - 0.5rem);
+  }
+}
