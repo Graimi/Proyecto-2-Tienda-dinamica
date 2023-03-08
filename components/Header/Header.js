@@ -1,3 +1,5 @@
+import './Header.css';
+
 import headerTemplate from './HeaderTemplate.js';
 
 // Aquí añadimos el template del header

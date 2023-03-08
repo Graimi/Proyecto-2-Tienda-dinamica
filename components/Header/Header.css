@@ -1,0 +1,153 @@
+/* --✅1.HEADER------------------------------------------------------------------------ */
+
+/* Para hacer fijo el header en la parte superior */
+.bc__section__header {
+  position: fixed;
+  width: var(--bc__complete);
+  top: var(--bc__empty);
+  z-index: 2;
+}
+/* Diseños específicos del header */
+.bc__section__header__layout {
+  justify-content: space-around;
+  text-transform: uppercase;
+  font-size: var(--bc__typography--size--h3);
+  font-weight: var(--bc__typography--weight--500);
+  word-spacing: var(--bc__typography--spacing--content);
+  min-height: var(--bc__height--header);
+  padding: var(--bc__padding--big);
+  /* Con lo siguiente preparamos la invisible navbar junto con JS */
+  background-color: var(--bc__color--transparent);
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Diseños para poner el nombre del logo hueco */
+.bc__header__logo {
+  font-family: var(--bc__typography--family--logo);
+  -webkit-text-stroke: var(--bc__text__stroke--white);
+  color: var(--bc__color--transparent);
+}
+
+/* Diseños para la navbar en desktop */
+.bc__navbar__header {
+  flex-direction: row;
+  gap: var(--bc__gap--medium);
+}
+
+/* Diseño para quitar la hamburguesa, estamos en desktop first */
+.bc__hamburguer__label,
+.bc__hamburguer {
+  display: var(--bc__style--none);
+}
+
+/* ✅1.1.Contact button */
+/* Diseños específicos para el efecto de la palabra Contacto */
+
+/* Dando estilos específicos al botón */
+.bc__contact__button {
+  position: relative;
+  font-size: var(--bc__typography--size--h3);
+  text-transform: uppercase;
+  background: var(--bc__color--transparent);
+  border: var(--bc__style--none);
+}
+
+/* Aplicando por defecto el color blanco */
+.bc__contact__text--plain {
+  color: var(--bc__color--white);
+}
+
+/* Los estilos del texto cuando se realiza el hover */
+.bc__contact__text--hover {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  -webkit-text-stroke: var(--bc__text__stroke--yellow);
+  color: var(--bc__color--transparent);
+  width: var(--bc__empty);
+  border-right: 0.2rem double var(--bc__color--yellow);
+  inset: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+/* HOVER -> Acción para mover la doble raya */
+.bc__contact__button:hover .bc__contact__text--hover {
+  width: var(--bc__complete);
+}
+
+/* HOVER -> Para no superponer el color anterior */
+.bc__contact__button:hover .bc__contact__text--plain {
+  color: var(--bc__color--transparent);
+}
+
+/* TABLET DISPLAY */
+@media screen and (min-width: 23.5rem) and (max-width: 48rem) {
+  /* --✅1.HEADER------------------------------------------------------------------------ */
+  /* Se cambia el display del header para adapatarlo a tablet */
+  .bc__section__header__layout {
+    display: block;
+    min-height: 5vh;
+  }
+
+  /* Se centra el texto del logo */
+  .bc__header__logo {
+    text-align: center;
+    margin: auto;
+  }
+
+  /* Se fija "a mano" la posición de la hamburguesa */
+  .bc__hamburguer__label {
+    display: block;
+    position: absolute;
+    top: 1.43rem;
+    right: 3.5rem;
+  }
+
+  /* Por defecto la nav no se ve */
+  .bc__section__navbar {
+    display: var(--bc__style--none);
+  }
+
+  /* CHECKED -> Aparece la nav */
+  .bc__hamburguer:checked + .bc__section__navbar {
+    display: block;
+    padding: var(--bc__padding--big);
+  }
+
+  /* Dirección de los items del nav */
+  .bc__navbar__header {
+    flex-direction: column;
+  }
+}
+
+/* MOBILE DISPLAY */
+@media screen and (max-width: 23.5rem) {
+  /* --✅1.HEADER------------------------------------------------------------------------ */
+  /* Se cambia la dirección del header para adapatarlo a movil */
+  .bc__section__header__layout {
+    flex-direction: column;
+    gap: var(--bc__gap--medium);
+  }
+
+  /* Se fija la posición de la hamburguesa */
+  .bc__hamburguer__label {
+    display: inline-block;
+  }
+
+  /* Por defecto la nav no se ve */
+  .bc__section__navbar {
+    display: var(--bc__style--none);
+  }
+
+  /* CHECKED -> Aparece la nav */
+  .bc__hamburguer:checked ~ .bc__section__navbar {
+    display: block;
+  }
+
+  /* Dirección de los items del nav */
+  .bc__navbar__header {
+    flex-direction: column;
+  }
+}
