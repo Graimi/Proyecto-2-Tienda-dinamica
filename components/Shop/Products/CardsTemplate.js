@@ -1,25 +1,25 @@
-const cardsTemplate = (link, name, sellerImg, productImg, price, size) => `<li class="bc__product">
+const cardsTemplate = (card) => `<li class="bc__product">
 <article class="bc__product--card">
   <a
-    href=${link}
+    href=${card.link}
     target="_blank"
     rel="noopener"
   >
     <div class="bc__card--details">
-      <h2 class="bc__card--title">${name}</h2>
+      <h2 class="bc__card--title">${card.name}</h2>
       <img
         class="bc__brand"
-        src=${sellerImg}
+        src=${card.sellerImg}
         alt="logo de la marca"
       />
       <img
         class="bc__product--image"
-        src=${productImg}
+        src=${card.productImg}
         alt="foto de los guantes"
       />
       <div class="bc__card--body bc__layout__flex">
-        <p>${price}€</p>
-        <p>${size}oz</p>
+        <p>${card.price}€</p>
+        <p>${card.size}oz</p>
       </div>
     </div>
   </a>

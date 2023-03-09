@@ -12,14 +12,14 @@ const products = (listProducts) => {
     const li = document.createElement('list');
     li.className = 'bc__product';
     // li.innerHTML = cardsTemplate(product);
-    li.innerHTML = cardsTemplate(
-      product.link,
-      product.name,
-      product.sellerImg,
-      product.productImg,
-      product.price,
-      product.size
-    );
+    li.innerHTML = cardsTemplate({
+      link: product.link,
+      name: product.name,
+      sellerImg: product.sellerImg,
+      productImg: product.productImg,
+      price: product.price,
+      size: product.size
+    });
     // SUUPER IMPORTANTE hacer este paso antes de salir del for of, una buena tarde perdida
     ul.appendChild(li);
   }

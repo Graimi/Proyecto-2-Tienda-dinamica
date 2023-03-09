@@ -219,6 +219,10 @@ li {
   z-index: 1;
 }
 
+.active {
+  display: inline;
+}
+
 /* OPCIÓN INPUT
 .bc__filter__seller {
   display: none;

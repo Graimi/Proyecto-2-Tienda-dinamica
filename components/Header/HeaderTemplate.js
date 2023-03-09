@@ -1,8 +1,5 @@
-const headerTemplate = (
-  webName,
-  contactLink
-) => `<div class="bc__section__header__layout bc__layout__flex">
-<a href="#hero"> <h3 class="bc__header__logo">${webName}</h3> </a>
+const headerTemplate = (header) => `<div class="bc__section__header__layout bc__layout__flex">
+<a href="#hero"> <h3 class="bc__header__logo">${header.webName}</h3> </a>
 <!--  HAMBURGUER -->
 <label class="bc__hamburguer__label" for="hamburger">&#9776;</label>
 <input type="checkbox" name="bc__hamburguer" class="bc__hamburguer" id="hamburger" />
@@ -17,7 +14,7 @@ const headerTemplate = (
     </li>
     <li>
       <a
-        href=${contactLink}
+        href=${header.contactLink}
         target="_blank"
         class="bc__contact__button"
       >

@@ -1,10 +1,10 @@
-const heroTemplate = (logoLink, slogan, cta) => `<img
+const heroTemplate = (hero) => `<img
 class="bc__hero__logo"
-src=${logoLink}
+src=${hero.logoLink}
 alt="logo del gimnasio"
 />
-<h1 class="bc__hero__description">${slogan}</h1>
-<a href="#shop"><h3 class="bc__hero__CTA">${cta}</h3></a>
+<h1 class="bc__hero__description">${hero.slogan}</h1>
+<a href="#shop"><h3 class="bc__hero__CTA">${hero.cta}</h3></a>
 <a href="#shop"
 ><img
   class="bc__hero__next"

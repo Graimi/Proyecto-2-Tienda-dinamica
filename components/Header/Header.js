@@ -5,10 +5,11 @@ import headerTemplate from './HeaderTemplate.js';
 // Aquí añadimos el template del header
 const headerSection = document.querySelector('#header');
 
-headerSection.innerHTML += headerTemplate(
-  'NORBA CERES',
-  'https://api.whatsapp.com/send?phone=34638560723&text=Hola!%20%C2%BFTienes%20alguna%20duda%20con%20los%20productos%3F'
-);
+headerSection.innerHTML += headerTemplate({
+  webName: 'NORBA CERES',
+  contactLink:
+    'https://api.whatsapp.com/send?phone=34638560723&text=Hola!%20%C2%BFTienes%20alguna%20duda%20con%20los%20productos%3F'
+});
 
 // A partir de aquí creamos el código para la invisible navbar
 const navBar = document.querySelector('.bc__section__header__layout');
