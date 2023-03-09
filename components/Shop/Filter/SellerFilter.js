@@ -1,43 +1,56 @@
-const toggleSeller = () => {
-  // Funciones para hacer toggle del seller, aplicar a cada una posteriormente
-  // const buttonSeller = document.querySelector(`#${seller}__button`);
-  const buttonSeller = document.querySelector('.bc__filter__brand--button');
+// ¿Borrar o crear un doc por cada filtro?
 
-  const imageOver = document.querySelector('.image__over');
+// import data from '../../../data/Data.js';
+// import products from '../Products/Products.js';
+// // import { filteredData } from './Filter.js';
+// import { sellerTemplate } from './FilterTemplate.js';
 
-  const toggleFunction = () => {
-    // Declaramos esta variable que nos serirá de base para el estado del toggle
-    let state = false;
-    if (state) {
-      imageOver.style.display = 'inline';
-      state = false;
-    } else {
-      imageOver.className('.image__over');
-      state = true;
-    }
-  };
-  buttonSeller.addEventListener('click', toggleFunction);
-};
+// let filteredData = [];
 
-export default toggleSeller;
-
-// // Funciones para hacer toggle del seller, aplicar a cada una posteriormente
-// const imageOver = document.querySelector('.image__over'.seller.seller);
-// const buttonSeller = document.querySelector('.bc__filter__brand--button'.seller.seller);
-
-// // Declaramos esta variable que nos serirá de base para el estado del toggle
-// let state = true;
-
-// const toggleSeller = () => {
-//   if (state) {
-//     imageOver.style.display = 'inline';
-//     state = false;
-//   } else {
-//     imageOver.style.display = 'none';
-//     state = true;
+// const sellerDetails = (sellers) => {
+//   const sellerImgContainer = document.querySelector('.bc__filter__brand--img');
+//   // Usamos esta variable para almacenar las veces que aparece un vendedor
+//   const sellersCounter = [];
+//   for (const seller of sellers) {
+//     // Con el siguiente condicional indicamos que aparezca el siguiente template
+//     if (!sellersCounter.includes(seller.seller)) {
+//       sellerImgContainer.innerHTML += sellerTemplate({
+//         seller: seller.seller,
+//         sellerImg: seller.sellerImg
+//       });
+//       // Con esto hacemos añadimos el vendedor y evitamos que se repita
+//       sellersCounter.push(seller.seller);
+//     }
 //   }
 // };
+// // sellerDetails(data);
 
-// const addSeller = buttonSeller.addEventListener('click', toggleSeller);
+// // Declaramos la función modelo de filtrado
+// const filterFunction = (seller, info) => {
+//   return info.filter((item) => item.seller === seller);
+// };
 
-// export default addSeller;
+// // Seleccionamos los botones de los sellers
+// // Sería interesante saber interpolar nombres de variables para hacer automático los siguientes pasos
+// const venumButton = document.querySelector('#venum__button');
+// const everlastButton = document.querySelector('#everlast__button');
+// const leoneButton = document.querySelector('#leone__button');
+
+// // Empezamos con las funciones de filtrado
+// venumButton.addEventListener('click', () => {
+//   // Filtramos solo los datos que nos interesan y los almacenamos en filteredData
+//   filteredData = filterFunction('venum', data);
+//   products(filteredData);
+// });
+
+// everlastButton.addEventListener('click', () => {
+//   filteredData = filterFunction('everlast', data);
+//   products(filteredData);
+// });
+
+// leoneButton.addEventListener('click', () => {
+//   filteredData = filterFunction('leone', data);
+//   products(filteredData);
+// });
+
+// export default sellerDetails;

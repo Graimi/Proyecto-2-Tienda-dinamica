@@ -9,17 +9,11 @@ export const filterTemplate = `<div class="bc__filter__brand"><h2>Marca</h2></di
 </div>`;
 
 export const sellerTemplate = (seller) =>
-  `<button type="button" class="bc__filter__brand--button" id="${seller}__button">
+  `<button type="button" class="bc__filter__brand--button" id="${seller.seller}__button">
 <img
   class="image__seller"
   src=${seller.sellerImg}
   alt="Logo de la marca"
-/>
-<img
-  class="image__over"
-  id="${seller.seller}__tick"
-  src=${seller.tickImg}
-  alt="Imagen del tick"
 />
 </button>`;
 

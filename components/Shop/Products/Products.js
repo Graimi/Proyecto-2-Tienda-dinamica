@@ -7,11 +7,12 @@ import cardsTemplate from './CardsTemplate.js';
 const products = (listProducts) => {
   // En el index se ha mantenido el ul por si posteriormente se alle algo además de las cards
   const ul = document.querySelector('.bc__section__shop');
+  // Limpiamos el container para que no se repitan los elementos al filtrar
+  ul.innerHTML = '';
   // Se ha usado un for of para acceder a cada uno de los objetos
   for (const product of listProducts) {
     const li = document.createElement('list');
     li.className = 'bc__product';
-    // li.innerHTML = cardsTemplate(product);
     li.innerHTML = cardsTemplate({
       link: product.link,
       name: product.name,
