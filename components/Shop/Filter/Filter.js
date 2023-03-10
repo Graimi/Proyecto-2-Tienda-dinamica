@@ -2,7 +2,7 @@
 import data from '../../../data/Data.js';
 import products from '../Products/Products.js';
 // import sellerDetails from './SellerMap.js';
-import { filterTemplate, sellerTemplate } from './FilterTemplate.js';
+import { filterTemplate, priceTemplate, sellerTemplate } from './FilterTemplate.js';
 import toggleFilter from './ToggleFilter.js';
 
 // Añadimos el contenedor de los filtros
@@ -23,6 +23,7 @@ const filter = () => {
 // El toggle lo añadimos aquí para no evitar que se repita cada vez
 toggleFilter();
 
+// Añadimos y ejecutamos el filtro por vendedor
 const sellerDetails = (sellers) => {
   // const sellerContainer = document.createElement
   const sellerImgContainer = document.querySelector('.bc__filter__brand--img');
@@ -69,6 +70,15 @@ leoneButton.addEventListener('click', () => {
   filteredData = filterFunction('leone', data);
   products(filteredData);
 });
+
+// Añadimos y ejecutamos el filtro por precio
+// Hay que recorrer todo el data y crear una función que recoja el precio más bajo y el mas alto para dárselo al template
+// Procedimiento similar al seller
+// Meter en un template y ver los precios más bajos y altos
+const priceFilter = document.querySelector('.bc__filter__price');
+priceFilter.innerHTML += priceTemplate;
+
+// const rangeInput = document.querySelector('#priceRange');
 
 // Seleccionamos el botón para eliminar todos los filtros
 const removeButton = document.querySelector('.bc__filter__remove--button');

@@ -166,6 +166,7 @@ li {
   z-index: 1;
 }
 
+/* Diseños generales para cada filtro */
 .bc__section__filter {
   padding: var(--bc__padding--big);
   background-color: var(--bc__color--white--light);
@@ -175,30 +176,14 @@ li {
   transition: cubic-bezier(0.2, 0.5, 0.1, 1) 1s;
 }
 
+/* Margen entre cada uno de los filtros */
 .bc__section__filter > div {
   margin: 0.8rem;
+  padding: 0.3rem;
 }
 
-#filter {
-  padding-top: calc(var(--bc__height--header) + var(--bc__padding--medium));
-  z-index: 1;
-}
-
-.bc__section__filter {
-  padding: var(--bc__padding--big);
-  background-color: var(--bc__color--white--light);
-  border-radius: var(--bc__border__radius--filter);
-  text-align: center;
-  width: 15rem;
-  transition: cubic-bezier(0.2, 0.5, 0.1, 1) 1s;
-}
-
-.bc__section__filter > div {
-  margin: 0.8rem;
-}
-
-/* Decoración para el título del filtro */
-.bc__filter__brand > h1 {
+/* Decoración para el título de filtro */
+.bc__filter__title {
   text-transform: uppercase;
   color: var(--bc__color--black);
   background-color: var(--bc__color--white--light);
@@ -218,11 +203,13 @@ li {
   text-transform: uppercase;
 }
 
+/* Diseño para que haya espacio entre los logos */
 .bc__filter__brand--img {
   display: flex;
   justify-content: space-between;
 }
 
+/* Diseños para los botones del filtro por marca */
 .bc__filter__brand--img > button {
   position: relative;
   background-color: transparent;
@@ -238,6 +225,70 @@ li {
   width: 3rem;
   height: 3rem;
   padding: 0.2rem;
+}
+
+/* Diseños para el filtro por precio tipo input */
+
+.bc__filter__price--details {
+  display: flex;
+  justify-content: space-between;
+  color: var(--bc__color--black);
+  font-weight: var(--bc__typography--weight--300);
+  margin-top: 0.5rem;
+}
+
+.bc__filter__price--details > output {
+  font-weight: var(--bc__typography--weight--500);
+}
+
+#priceRange {
+  /* Aumentar tamaño general si es necesario */
+  /* height: 2rem; */
+  /* Cambiar cuando se haya diseñado */
+  width: 100%;
+  /* margin: 10px 10rem;
+  width: 10rem; */
+  appearance: none;
+  -webkit-appearance: none;
+}
+#priceRange::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 0.2rem;
+  border-radius: 5rem;
+  background: var(--bc__color--black);
+  cursor: grabbing;
+}
+
+/* Características especiales para chrome */
+#priceRange::-webkit-slider-thumb {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-top: -0.65rem;
+  -webkit-appearance: none;
+  cursor: grabbing;
+  background: url('https://res.cloudinary.com/dwsffp1eq/image/upload/v1678441830/ceres-box/rec_cshkns.png');
+}
+
+#priceRange:focus::-webkit-slider-runnable-track {
+  background: var(--bc__color--black);
+}
+
+/* Características especiales para firefox */
+#priceRange::-moz-range-track {
+  width: 100%;
+  height: 0.2rem;
+  border-radius: 5rem;
+  background: var(--bc__color--black);
+  cursor: grabbing;
+}
+
+#priceRange::-moz-range-thumb {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-top: -0.65rem;
+  appearance: none;
+  cursor: grabbing;
+  background: url('https://res.cloudinary.com/dwsffp1eq/image/upload/v1678441830/ceres-box/rec_cshkns.png');
 }
 
 /* Decoración del botón para borrar el filtro */
