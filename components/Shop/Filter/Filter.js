@@ -12,11 +12,13 @@ filterContainer.className = 'bc__section__filter';
 filterSection.appendChild(filterContainer);
 filterContainer.innerHTML += filterTemplate;
 
-// Esta variable nos va a ayudar a que los valores no se superpongan y solo aparezcan los filtrados
-let filteredData = [];
+// Estas variables nos va a ayudar a que los valores no se superpongan y solo aparezcan los filtrados
+let filteredSellers = [];
+let filteredPrice = [];
 
 // Con esta función reiniciamos todo
 const filter = () => {
+  // Con esta primera función reiniciamos todos los productos
   products(data);
 };
 
@@ -54,28 +56,30 @@ const venumButton = document.querySelector('#venum__button');
 const everlastButton = document.querySelector('#everlast__button');
 const leoneButton = document.querySelector('#leone__button');
 
-// Empezamos con las funciones de filtrado
+// Empezamos con las funciones de filtrado de los sellers
 venumButton.addEventListener('click', () => {
-  // Filtramos solo los datos que nos interesan y los almacenamos en filteredData
-  filteredData = filterFunction('venum', data);
-  products(filteredData);
+  // Filtramos solo los datos que nos interesan y los almacenamos en filteredSellers
+  filteredSellers = filterFunction('venum', data);
+  products(filteredSellers);
 });
 
 everlastButton.addEventListener('click', () => {
-  filteredData = filterFunction('everlast', data);
-  products(filteredData);
+  filteredSellers = filterFunction('everlast', data);
+  products(filteredSellers);
 });
 
 leoneButton.addEventListener('click', () => {
-  filteredData = filterFunction('leone', data);
-  products(filteredData);
+  filteredSellers = filterFunction('leone', data);
+  products(filteredSellers);
 });
 
+// Añadimos estas dos funciones como contenedores de valores
+// Es importante que juguemos con infinity para que no tengamos problemas con las cantidades
+let maxPrice = -Infinity;
+let minPrice = Infinity;
 // Añadimos y ejecutamos el filtro por precio
 const priceFilter = (list) => {
   // A diferencia del caso anterior, en este declaramos únicamente los valores máximos y mínimos con el for of para aplicarlos directamente al template
-  let maxPrice = -Infinity;
-  let minPrice = Infinity;
   for (const details of list) {
     if (details.price > maxPrice) {
       maxPrice = details.price;
@@ -92,12 +96,28 @@ const priceFilter = (list) => {
 };
 priceFilter(data);
 
-// const rangeInput = document.querySelector('#priceRange');
+// Declaramos la función modelo de filtrado para el precio
+const filterPriceFunction = (price, info) => {
+  return info.filter((item) => item.price <= price);
+};
+
+const rangeInput = document.querySelector('#priceRange');
+const rangeValue = document.querySelector('#rangevalue');
+rangeInput.addEventListener('input', (price) => {
+  filteredPrice = filterPriceFunction(price.target.value, data);
+  products(filteredPrice);
+});
+
+// console.log(filterPriceFunction(maxPrice, data));
 
 // Seleccionamos el botón para eliminar todos los filtros
 const removeButton = document.querySelector('.bc__filter__remove--button');
 removeButton.addEventListener('click', () => {
+  // Al hacer mención al filter reiniciamos los productos
   filter();
+  // Con las dos siguientes reiniciamos el valor del input al máximo de los productos
+  rangeValue.innerText = maxPrice;
+  rangeInput.value = maxPrice;
 });
 
 export default filter();

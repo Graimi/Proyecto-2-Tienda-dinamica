@@ -304,7 +304,7 @@ li {
 }
 
 .bc__filter__remove :hover {
-  transform: translateY(-1px);
+  transform: translateY(-0.2rem);
   box-shadow: var(--bc__color--grey) 0 0.3rem 0.5rem;
 }
 

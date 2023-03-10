@@ -25,7 +25,7 @@ id="priceRange"
 class="bc__filter__price--input"
 // Valor con el que empezamos por defecto
 value=${price.max}
-// oninput="rangevalue.value=value"
+oninput="rangevalue.value=value"
 min="${price.min}"
 max="${price.max}"
 step="1"
