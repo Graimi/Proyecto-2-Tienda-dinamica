@@ -17,9 +17,11 @@ let filteredData = [];
 
 // Con esta función reiniciamos todo
 const filter = () => {
-  toggleFilter();
   products(data);
 };
+
+// El toggle lo añadimos aquí para no evitar que se repita cada vez
+toggleFilter();
 
 const sellerDetails = (sellers) => {
   // const sellerContainer = document.createElement

@@ -1,5 +1,6 @@
 // Declaramos aquí el template del filtro
 export const filterTemplate = `<div class="bc__filter__brand">
+<h1>FILTROS</h1>
 <h2>Marca</h2>
 <div class="bc__filter__brand--img"></div>
 </div>

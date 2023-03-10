@@ -17,15 +17,17 @@ const toggleFilter = () => {
     section.style.width = '15rem';
     section.style.writingMode = 'horizontal-tb';
     section.style.color = 'var(--bc__color--black)';
+    section.style.padding = 'var(--bc__padding--big)';
   };
 
-  const falseTemplate = `<h3>FILTROS</h3>`;
+  // const falseTemplate = `<h3>FILTROS</h3>`;
   // Estilos del filtro cuando está cerrado
   const falseStyles = (section) => {
-    section.style.width = '5rem';
+    section.style.width = '4.5rem';
     section.style.writingMode = 'vertical-rl';
     section.style.textOrientation = 'upright';
     section.style.color = 'var(--bc__color--black)';
+    section.style.padding = '0.5rem';
   };
 
   const hideFilter = () => {
@@ -33,13 +35,15 @@ const toggleFilter = () => {
     const toggleImage = document.querySelector('.bc__filter__toggle--image');
     if (state) {
       falseStyles(filterContainer);
-      filterContainer.innerHTML = falseTemplate;
+      // filterContainer.innerHTML = falseTemplate;
+      // filterContainer.style.display = 'none';
       toggleImage.style.transform = 'rotate(180deg)';
       state = false;
     } else {
       trueStyles(filterContainer);
       // Invocamos el template del filtro
-      filterContainer.innerHTML = filterTemplate;
+      // filterContainer.innerHTML = filterTemplate;
+      // filterContainer.style.display = 'none';
       toggleImage.style.transform = 'rotate(0deg)';
       state = true;
     }

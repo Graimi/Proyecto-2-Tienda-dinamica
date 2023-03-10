@@ -197,6 +197,18 @@ li {
   margin: 0.8rem;
 }
 
+/* Decoración para el título del filtro */
+.bc__filter__brand > h1 {
+  text-transform: uppercase;
+  color: var(--bc__color--black);
+  background-color: var(--bc__color--white--light);
+  margin: 1rem;
+  transition: all 0.5s;
+  font-size: var(--bc__typography--size--h2);
+  font-weight: var(--bc__typography--weight--500);
+  /* text-decoration: underline; */
+}
+
 /* Decoración de las letras específicas de los títulos de los filtros */
 .bc__filter__brand > h2,
 .bc__filter__price > h2,
@@ -227,40 +239,6 @@ li {
   height: 3rem;
   padding: 0.2rem;
 }
-
-/* Estilos a añadir cuando se seleccione una marca */
-.image__over {
-  display: none;
-  position: absolute;
-  top: auto;
-  left: 0;
-  z-index: 1;
-}
-
-.active {
-  display: inline;
-}
-
-/* OPCIÓN INPUT
-.bc__filter__seller {
-  display: none;
-}
-
-.bc__filter__seller:checked ~ .image__over{
-  display: block;
-}
-
-.bc__filter__seller--label img{
-  width: 3rem;
-  height: 3rem;
-  padding: 0.2rem;
-}
-
-Estilos a añadir cuando se seleccione una marca
-.image__over {
-  display: none;
-}
-*/
 
 /* Decoración del botón para borrar el filtro */
 .bc__filter__remove--button {
