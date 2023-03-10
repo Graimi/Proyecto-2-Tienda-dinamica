@@ -15,7 +15,8 @@
   --bc__typography--family--body: 'Rubik', sans-serif;
 
   /* FONT SIZE */
-  --bc__typography--size--p: 0.8rem;
+  --bc__typography--size--footer: 0.8rem;
+  --bc__typography--size--p: 1rem;
   --bc__typography--size--h3: 1.2rem;
   --bc__typography--size--h2: 1.5rem;
   --bc__typography--size--h1: 2rem;
@@ -44,6 +45,7 @@
 
   /* MARGIN */
   --bc__margin--small: 0.5rem;
+  --bc__margin--filter: 1.5rem 0rem 1.5rem 0rem;
 
   /* GAP */
   --bc__gap--small: 0.7rem;
@@ -67,7 +69,7 @@
 
   /* HEIGHT */
   --bc__height--small: 2.5rem;
-  --bc__height--card: 18rem;
+  --bc__height--card: 33rem;
   --bc__height--header: 12vh;
   --bc__height--footer: 35vh;
   --bc__height--hero: 100vh;
@@ -168,11 +170,14 @@ li {
 
 /* Diseños generales para cada filtro */
 .bc__section__filter {
+  /* display: flex;
+  flex-direction: column; */
   padding: var(--bc__padding--big);
   background-color: var(--bc__color--white--light);
   border-radius: var(--bc__border__radius--filter);
   text-align: center;
   width: 15rem;
+  height: var(--bc__height--card);
   transition: cubic-bezier(0.2, 0.5, 0.1, 1) 1s;
 }
 
@@ -187,7 +192,9 @@ li {
   text-transform: uppercase;
   color: var(--bc__color--black);
   background-color: var(--bc__color--white--light);
-  margin: 1rem;
+  margin: var(--bc__margin--filter);
+  margin-right: 1rem;
+  margin-left: 1rem;
   transition: all 0.5s;
   font-size: var(--bc__typography--size--h2);
   font-weight: var(--bc__typography--weight--500);
@@ -228,7 +235,6 @@ li {
 }
 
 /* Diseños para el filtro por precio tipo input */
-
 .bc__filter__price--details {
   display: flex;
   justify-content: space-between;
@@ -242,12 +248,7 @@ li {
 }
 
 #priceRange {
-  /* Aumentar tamaño general si es necesario */
-  /* height: 2rem; */
-  /* Cambiar cuando se haya diseñado */
   width: 100%;
-  /* margin: 10px 10rem;
-  width: 10rem; */
   appearance: none;
   -webkit-appearance: none;
 }
@@ -291,14 +292,47 @@ li {
   background: url('https://res.cloudinary.com/dwsffp1eq/image/upload/v1678441830/ceres-box/rec_cshkns.png');
 }
 
+/* Diseños para el filtro de tamaño tipo select */
+#sizeSelect {
+  /* margin: 10rem; */
+  /* Determinar tamaño luego */
+  margin-top: 0.5rem;
+  width: 5.5rem;
+  height: 2.5rem;
+  padding: 0rem 0.8rem 0rem 0.8rem;
+  border: none;
+  border-radius: 50rem;
+  /* text-align: center; */
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url('https://res.cloudinary.com/dwsffp1eq/image/upload/v1678105109/ceres-box/toggle__black_yjozkb.png')
+    no-repeat 3.5rem / 22px 14px;
+  background-color: var(--bc__color--white);
+  color: var(--bc__color--black);
+  font-weight: var(--bc__typography--weight--500);
+  font-size: var(--bc__typography--size--p);
+}
+
+#sizeSelect:hover {
+  border: 0.1rem solid var(--bc__color--black);
+}
+
+#sizeSelect option {
+  background-color: var(--bc__color--white);
+  /* color: var(--bc__color--white); */
+}
+
 /* Decoración del botón para borrar el filtro */
 .bc__filter__remove--button {
   text-transform: uppercase;
   color: var(--bc__color--black);
   background-color: var(--bc__color--white--light);
   padding: 0.5rem;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   transition: all 0.5s;
+  margin: var(--bc__margin--filter);
   font-size: 1rem;
   font-weight: var(--bc__typography--weight--700);
 }
@@ -321,15 +355,12 @@ li {
   transition: all 1s;
 }
 
-
 /* --🟨5.MEDIA QUERIES------------------------------------------------------------------------ */
 
 /* TABLET DISPLAY */
 @media screen and (min-width: 23.5rem) and (max-width: 48rem) {
- 
 }
 
 /* MOBILE DISPLAY */
 @media screen and (max-width: 23.5rem) {
-
 }

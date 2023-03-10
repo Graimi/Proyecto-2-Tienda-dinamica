@@ -18,8 +18,8 @@
   /* Estilos generales de las cards */
   .bc__product--card {
     position: relative;
-    width: var(--bc__height--card);
-    height: 33rem;
+    width: 18rem;
+    height: var(--bc__height--card);
     border-radius: var(--bc__border__radius--big);
     background: var(--bc__color--white--light);
     padding: var(--bc__padding--big);

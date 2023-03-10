@@ -48,8 +48,10 @@
 <li> [] CSS </li>
 [✅] nav fija en parte superior <br>
 [✅] Diseño invisible nav <br>
+[] ver como diseñar nav bar en medias queries <br>
 [✅] Img header: corrediza <br>
 [] Editar la scrollbar de la página (Ver ChatGPT) <br>
+[] hacer el filtro fixed en la página <br>
 </ol>
 <br>
 

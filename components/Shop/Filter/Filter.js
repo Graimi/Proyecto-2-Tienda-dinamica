@@ -108,7 +108,11 @@ rangeInput.addEventListener('input', (price) => {
   products(filteredPrice);
 });
 
-// console.log(filterPriceFunction(maxPrice, data));
+const sizeContainer = document.querySelector('.bc__filter__size');
+sizeContainer.innerHTML += `<select name="sizeSelect" id="sizeSelect">
+            <option value="hide">Elige</option>
+            <option value="8oz">8oz</option>
+          </select>`;
 
 // Seleccionamos el botón para eliminar todos los filtros
 const removeButton = document.querySelector('.bc__filter__remove--button');

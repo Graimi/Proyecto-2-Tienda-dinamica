@@ -7,7 +7,7 @@
   min-height: var(--bc__height--footer);
   padding: var(--bc__padding--big);
   gap: var(--bc__gap--small);
-  font-size: var(--bc__typography--size--p);
+  font-size: var(--bc__typography--size--footer);
   font-weight: var(--bc__typography--weight--300);
   color: var(--bc__color--yellow);
   background-image: url(https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605856/ceres-box/footer_zwwxpn.png);
