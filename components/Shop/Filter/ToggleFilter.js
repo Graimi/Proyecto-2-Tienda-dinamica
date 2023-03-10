@@ -1,15 +1,17 @@
-import { filterTemplate } from './FilterTemplate.js';
+import { filterTemplate, toggleFilterTemplate } from './FilterTemplate.js';
 
 // En este documento crearemos las funciones pertinentes del toggle del filtro haciendo que este aparezca y desaparezca
 // Función para cambiar entre los estados del filter y aplicar sus respectivos valores y estilos
 const toggleFilter = () => {
+  const filterSection = document.querySelector('#filter');
+  filterSection.innerHTML += toggleFilterTemplate(
+    'https://res.cloudinary.com/dwsffp1eq/image/upload/v1678105109/ceres-box/toggle_white_o1rnib.png'
+  );
   const toggleFilterButton = document.querySelector('.bc__filter__toggle--button');
 
   // Declaramos esta variable que nos serirá de base para el estado del toggle
   let state = true;
 
-  // Invocamos el template del filtro
-  const trueTemplate = filterTemplate;
   // Estilos del filtro cuando está abierto
   const trueStyles = (section) => {
     section.style.width = '15rem';
@@ -27,16 +29,17 @@ const toggleFilter = () => {
   };
 
   const hideFilter = () => {
-    const filterSection = document.querySelector('.bc__section__filter');
+    const filterContainer = document.querySelector('.bc__section__filter');
     const toggleImage = document.querySelector('.bc__filter__toggle--image');
     if (state) {
-      falseStyles(filterSection);
-      filterSection.innerHTML = falseTemplate;
+      falseStyles(filterContainer);
+      filterContainer.innerHTML = falseTemplate;
       toggleImage.style.transform = 'rotate(180deg)';
       state = false;
     } else {
-      trueStyles(filterSection);
-      filterSection.innerHTML = trueTemplate;
+      trueStyles(filterContainer);
+      // Invocamos el template del filtro
+      filterContainer.innerHTML = filterTemplate;
       toggleImage.style.transform = 'rotate(0deg)';
       state = true;
     }

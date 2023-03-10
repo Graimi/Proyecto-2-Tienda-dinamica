@@ -2,21 +2,27 @@
 import data from '../../../data/Data.js';
 import products from '../Products/Products.js';
 // import sellerDetails from './SellerMap.js';
-import { sellerTemplate } from './FilterTemplate.js';
+import { filterTemplate, sellerTemplate } from './FilterTemplate.js';
 import toggleFilter from './ToggleFilter.js';
+
+// Añadimos el contenedor de los filtros
+const filterSection = document.querySelector('#filter');
+const filterContainer = document.createElement('div');
+filterContainer.className = 'bc__section__filter';
+filterSection.appendChild(filterContainer);
+filterContainer.innerHTML += filterTemplate;
 
 // Esta variable nos va a ayudar a que los valores no se superpongan y solo aparezcan los filtrados
 let filteredData = [];
 
 // Con esta función reiniciamos todo
 const filter = () => {
+  toggleFilter();
   products(data);
 };
 
-// El toggle lo añadimos aquí para no evitar que se repita cada vez
-toggleFilter();
-
 const sellerDetails = (sellers) => {
+  // const sellerContainer = document.createElement
   const sellerImgContainer = document.querySelector('.bc__filter__brand--img');
   // Usamos esta variable para almacenar las veces que aparece un vendedor
   const sellersCounter = [];
