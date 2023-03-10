@@ -1,7 +1,7 @@
 // Aquí añadimos el conjunto de los componentes del filter
 import data from '../../../data/Data.js';
 import products from '../Products/Products.js';
-// import sellerDetails from './SellerMap.js';
+// import sellerFilters from './SellerMap.js';
 import { filterTemplate, priceTemplate, sellerTemplate } from './FilterTemplate.js';
 import toggleFilter from './ToggleFilter.js';
 
@@ -24,24 +24,24 @@ const filter = () => {
 toggleFilter();
 
 // Añadimos y ejecutamos el filtro por vendedor
-const sellerDetails = (sellers) => {
+const sellerFilters = (list) => {
   // const sellerContainer = document.createElement
   const sellerImgContainer = document.querySelector('.bc__filter__brand--img');
   // Usamos esta variable para almacenar las veces que aparece un vendedor
   const sellersCounter = [];
-  for (const seller of sellers) {
+  for (const details of list) {
     // Con el siguiente condicional indicamos que aparezca el siguiente template
-    if (!sellersCounter.includes(seller.seller)) {
+    if (!sellersCounter.includes(details.seller)) {
       sellerImgContainer.innerHTML += sellerTemplate({
-        seller: seller.seller,
-        sellerImg: seller.sellerImg
+        seller: details.seller,
+        sellerImg: details.sellerImg
       });
       // Con esto hacemos añadimos el vendedor y evitamos que se repita
-      sellersCounter.push(seller.seller);
+      sellersCounter.push(details.seller);
     }
   }
 };
-sellerDetails(data);
+sellerFilters(data);
 
 // Declaramos la función modelo de filtrado
 const filterFunction = (seller, info) => {
@@ -72,11 +72,25 @@ leoneButton.addEventListener('click', () => {
 });
 
 // Añadimos y ejecutamos el filtro por precio
-// Hay que recorrer todo el data y crear una función que recoja el precio más bajo y el mas alto para dárselo al template
-// Procedimiento similar al seller
-// Meter en un template y ver los precios más bajos y altos
-const priceFilter = document.querySelector('.bc__filter__price');
-priceFilter.innerHTML += priceTemplate;
+const priceFilter = (list) => {
+  // A diferencia del caso anterior, en este declaramos únicamente los valores máximos y mínimos con el for of para aplicarlos directamente al template
+  let maxPrice = -Infinity;
+  let minPrice = Infinity;
+  for (const details of list) {
+    if (details.price > maxPrice) {
+      maxPrice = details.price;
+    } else if (details.price < minPrice) {
+      minPrice = details.price;
+    }
+  }
+  // Ahora que ya tenemos los valores los aplicamos al template
+  const priceContainer = document.querySelector('.bc__filter__price');
+  priceContainer.innerHTML += priceTemplate({
+    max: maxPrice,
+    min: minPrice
+  });
+};
+priceFilter(data);
 
 // const rangeInput = document.querySelector('#priceRange');
 
