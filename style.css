@@ -45,7 +45,7 @@
 
   /* MARGIN */
   --bc__margin--small: 0.5rem;
-  --bc__margin--filter: 1.5rem 0rem 1.5rem 0rem;
+  --bc__margin--filter: 0.3rem 0rem 0.3rem 0rem;
 
   /* GAP */
   --bc__gap--small: 0.7rem;
@@ -193,8 +193,6 @@ li {
   color: var(--bc__color--black);
   background-color: var(--bc__color--white--light);
   margin: var(--bc__margin--filter);
-  margin-right: 1rem;
-  margin-left: 1rem;
   transition: all 0.5s;
   font-size: var(--bc__typography--size--h2);
   font-weight: var(--bc__typography--weight--500);
@@ -213,7 +211,9 @@ li {
 /* Diseño para que haya espacio entre los logos */
 .bc__filter__brand--img {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 /* Diseños para los botones del filtro por marca */

@@ -130,6 +130,16 @@ const data = [
     price: 50,
     size: 10,
     link: 'https://leone1947.es/producto/gn059c-guantes-de-boxeo-leone-1947-verde-militar/'
+  },
+  {
+    name: 'MILITAR',
+    seller: 'buddha',
+    sellerImg:
+      'https://res.cloudinary.com/dwsffp1eq/image/upload/v1678545643/ceres-box/buddha_logo_ysrcz5.svg',
+    productImg: 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1678545743/ceres-box/premium_u4vvir.webp',
+    price: 50,
+    size: 10,
+    link: 'https://www.buddhafightwear.com/collections/guantes-top-premium-mate-34-90/products/guantes-de-boxeo-muay-thai-kick-boxing-top-premium-negros-mate'
   }
 ];
 

@@ -53,6 +53,7 @@
 [✅] Img header: corrediza <br>
 [] Editar la scrollbar de la página (Ver ChatGPT) <br>
 [] Hacer el filtro fixed en la página <br>
+[] Añadir los moz <br>
 </ol>
 <br>
 
