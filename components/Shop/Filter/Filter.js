@@ -13,9 +13,16 @@ filterSection.appendChild(filterContainer);
 filterContainer.innerHTML += filterTemplate;
 
 // Estas variables nos va a ayudar a que los valores no se superpongan y solo aparezcan los filtrados
-let filteredSellers = [];
-let filteredPrice = [];
-let filteredSize = [];
+let filteredData = [];
+// let filteredSellers = [];
+// let filteredPrice = [];
+// let filteredSize = [];
+
+// Función reset price para que el precio de los artículos se actualice cuando cambiamos de filtro
+const resetPrice = () => {
+  rangeValue.innerText = maxPrice;
+  rangeInput.value = maxPrice;
+};
 
 // Con esta función reiniciamos todo
 const filter = () => {
@@ -61,18 +68,32 @@ const leoneButton = document.querySelector('#leone__button');
 // Empezamos con las funciones de filtrado de los sellers
 venumButton.addEventListener('click', () => {
   // Filtramos solo los datos que nos interesan y los almacenamos en filteredSellers
-  filteredSellers = filterFunction('venum', data);
-  products(filteredSellers);
+  // filteredSellers = filterFunction('venum', data);
+  // products(filteredSellers);
+  filteredData = filterFunction('venum', data);
+  products(filteredData);
+  // Con el reset conseguimos resetear el precio cuando se seleccione otro seller
+  resetPrice();
+  // Ponemos el valor por defecto del select al cambiar el seller
+  sizeSelect.value = 'hide';
 });
 
 everlastButton.addEventListener('click', () => {
-  filteredSellers = filterFunction('everlast', data);
-  products(filteredSellers);
+  // filteredSellers = filterFunction('everlast', data);
+  // products(filteredSellers);
+  filteredData = filterFunction('everlast', data);
+  products(filteredData);
+  resetPrice();
+  sizeSelect.value = 'hide';
 });
 
 leoneButton.addEventListener('click', () => {
-  filteredSellers = filterFunction('leone', data);
-  products(filteredSellers);
+  // filteredSellers = filterFunction('leone', data);
+  // products(filteredSellers);
+  filteredData = filterFunction('leone', data);
+  products(filteredData);
+  resetPrice();
+  sizeSelect.value = 'hide';
 });
 
 // ⭐ FILTRO PRICE
@@ -107,32 +128,35 @@ const filterPriceFunction = (price, info) => {
 const rangeInput = document.querySelector('#priceRange');
 const rangeValue = document.querySelector('#rangevalue');
 rangeInput.addEventListener('input', (price) => {
-  filteredPrice = filterPriceFunction(price.target.value, data);
-  products(filteredPrice);
+  // filteredPrice = filterPriceFunction(price.target.value, data);
+  // products(filteredPrice);
+  filteredData = filterPriceFunction(price.target.value, data);
+  products(filteredData);
+  // Ponemos el valor por defecto del select al cambiar el precio
+  sizeSelect.value = 'hide';
 });
 
 // ⭐ FILTRO SIZE
 const sizeContainer = document.querySelector('.bc__filter__size');
-sizeContainer.innerHTML += `<select name="sizeSelect" id="sizeSelect"><option value="hide">Elige</option></select>`;
-const sizeSelector = document.querySelector('#sizeSelect');
+sizeContainer.innerHTML += `<select name="sizeSelect" id="sizeSelect">
+<option id=hidden value="hide" hidden data-text="Elige">Elige</option></select>`;
+const sizeSelect = document.querySelector('#sizeSelect');
 // Creamos la función para filtrar los productos por talla
 const sizeFilter = (list) => {
   // Usamos esta constante para almacenar los valores
   const sizeCounter = [];
   for (const details of list) {
-    console.log(details.size);
     if (!sizeCounter.includes(details.size)) {
       sizeCounter.push(details.size);
       sizeCounter.sort();
-      sizeSelector.innerHTML += `<option value="${details.size}">${details.size}oz</option>`;
+      sizeSelect.innerHTML += `<option value="${details.size}">${details.size}oz</option>`;
     }
   }
   // console.log(sizeCounter.map());
   // sizeCounter.map(
-  //   (size) => (sizeSelector.innerHTML += `<option value="${size}">${size}oz</option>`)
+  //   (size) => (sizeSelect.innerHTML += `<option value="${size}">${size}oz</option>`)
   // );
   // sizeCounter.sort();
-  console.log(sizeCounter);
 };
 sizeFilter(data);
 
@@ -145,10 +169,14 @@ const filterSizeFunction = (size, info) => {
   return info.filter((item) => item.size == size);
 };
 
-sizeSelector.addEventListener('input', (size) => {
-  filteredSize = filterSizeFunction(size.target.value, data);
-  products(filteredSize);
+sizeSelect.addEventListener('input', (size) => {
+  // filteredSize = filterSizeFunction(size.target.value, data);
+  // products(filteredSize);
+  filteredData = filterSizeFunction(size.target.value, data);
+  products(filteredData);
 });
+
+// PROBAR PONIENDO SOLO FILEREDSELLERS
 
 // ⭐ Botón remove
 // Seleccionamos el botón para eliminar todos los filtros
@@ -156,9 +184,10 @@ const removeButton = document.querySelector('.bc__filter__remove--button');
 removeButton.addEventListener('click', () => {
   // Al hacer mención al filter reiniciamos los productos
   filter();
-  // Con las dos siguientes reiniciamos el valor del input al máximo de los productos
-  rangeValue.innerText = maxPrice;
-  rangeInput.value = maxPrice;
+  // Con la siguiente reiniciamos el valor del input al máximo de los productos
+  resetPrice();
+  // Con esta ponemos el valor por defecto del select al reiniciar
+  sizeSelect.value = 'hide';
 });
 
 export default filter();
