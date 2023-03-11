@@ -15,6 +15,7 @@ filterContainer.innerHTML += filterTemplate;
 // Estas variables nos va a ayudar a que los valores no se superpongan y solo aparezcan los filtrados
 let filteredSellers = [];
 let filteredPrice = [];
+let filteredSize = [];
 
 // Con esta función reiniciamos todo
 const filter = () => {
@@ -25,6 +26,7 @@ const filter = () => {
 // El toggle lo añadimos aquí para no evitar que se repita cada vez
 toggleFilter();
 
+// ⭐ FILTRO SELLER
 // Añadimos y ejecutamos el filtro por vendedor
 const sellerFilters = (list) => {
   // const sellerContainer = document.createElement
@@ -73,6 +75,7 @@ leoneButton.addEventListener('click', () => {
   products(filteredSellers);
 });
 
+// ⭐ FILTRO PRICE
 // Añadimos estas dos funciones como contenedores de valores
 // Es importante que juguemos con infinity para que no tengamos problemas con las cantidades
 let maxPrice = -Infinity;
@@ -108,12 +111,46 @@ rangeInput.addEventListener('input', (price) => {
   products(filteredPrice);
 });
 
+// ⭐ FILTRO SIZE
 const sizeContainer = document.querySelector('.bc__filter__size');
-sizeContainer.innerHTML += `<select name="sizeSelect" id="sizeSelect">
-            <option value="hide">Elige</option>
-            <option value="8oz">8oz</option>
-          </select>`;
+sizeContainer.innerHTML += `<select name="sizeSelect" id="sizeSelect"><option value="hide">Elige</option></select>`;
+const sizeSelector = document.querySelector('#sizeSelect');
+// Creamos la función para filtrar los productos por talla
+const sizeFilter = (list) => {
+  // Usamos esta constante para almacenar los valores
+  const sizeCounter = [];
+  for (const details of list) {
+    console.log(details.size);
+    if (!sizeCounter.includes(details.size)) {
+      sizeCounter.push(details.size);
+      sizeCounter.sort();
+      sizeSelector.innerHTML += `<option value="${details.size}">${details.size}oz</option>`;
+    }
+  }
+  // console.log(sizeCounter.map());
+  // sizeCounter.map(
+  //   (size) => (sizeSelector.innerHTML += `<option value="${size}">${size}oz</option>`)
+  // );
+  // sizeCounter.sort();
+  console.log(sizeCounter);
+};
+sizeFilter(data);
 
+// sizeContainer.innerHTML += `<select name="sizeSelect" id="sizeSelect">
+//             <option value="hide">Elige</option>
+//             <option value="8oz">8oz</option>
+//           </select>`;
+
+const filterSizeFunction = (size, info) => {
+  return info.filter((item) => item.size == size);
+};
+
+sizeSelector.addEventListener('input', (size) => {
+  filteredSize = filterSizeFunction(size.target.value, data);
+  products(filteredSize);
+});
+
+// ⭐ Botón remove
 // Seleccionamos el botón para eliminar todos los filtros
 const removeButton = document.querySelector('.bc__filter__remove--button');
 removeButton.addEventListener('click', () => {
