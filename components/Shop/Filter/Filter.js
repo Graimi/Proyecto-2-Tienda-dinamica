@@ -14,11 +14,14 @@ filterContainer.innerHTML += filterTemplate;
 
 // Estas variables nos va a ayudar a que los valores no se superpongan y solo aparezcan los filtrados
 let filteredData = [];
-// let filteredSellers = [];
-// let filteredPrice = [];
-// let filteredSize = [];
+
+// Añadimos aquí este valor para que no de error más adelante por su uso antes de declarar
+let sizeSelect = document.querySelector('#sizeSelect');
 
 // Función reset price para que el precio de los artículos se actualice cuando cambiamos de filtro
+let rangeValue;
+let rangeInput;
+let maxPrice;
 const resetPrice = () => {
   rangeValue.innerText = maxPrice;
   rangeInput.value = maxPrice;
@@ -32,6 +35,11 @@ const filter = () => {
 
 // El toggle lo añadimos aquí para no evitar que se repita cada vez
 toggleFilter();
+
+// Declaramos la función modelo de filtrado
+const filterFunction = (seller, info) => {
+  return info.filter((item) => item.seller === seller);
+};
 
 // ⭐ FILTRO SELLER
 // Añadimos y ejecutamos el filtro por vendedor
@@ -54,20 +62,17 @@ const sellerFilters = (list) => {
 };
 sellerFilters(data);
 
-// Declaramos la función modelo de filtrado
-const filterFunction = (seller, info) => {
-  return info.filter((item) => item.seller === seller);
-};
-
 // Seleccionamos los botones de los sellers
 // Sería interesante saber interpolar nombres de variables para hacer automático los siguientes pasos
 const venumButton = document.querySelector('#venum__button');
 const everlastButton = document.querySelector('#everlast__button');
 const leoneButton = document.querySelector('#leone__button');
+const buddhaButton = document.querySelector('#buddha__button');
 
 // Empezamos con las funciones de filtrado de los sellers
 venumButton.addEventListener('click', () => {
   // Filtramos solo los datos que nos interesan y los almacenamos en filteredSellers
+  // En un principio usé las siguientes variables pero unifiqué todo usando solo filteredData para cada filtro
   // filteredSellers = filterFunction('venum', data);
   // products(filteredSellers);
   filteredData = filterFunction('venum', data);
@@ -79,8 +84,6 @@ venumButton.addEventListener('click', () => {
 });
 
 everlastButton.addEventListener('click', () => {
-  // filteredSellers = filterFunction('everlast', data);
-  // products(filteredSellers);
   filteredData = filterFunction('everlast', data);
   products(filteredData);
   resetPrice();
@@ -88,9 +91,14 @@ everlastButton.addEventListener('click', () => {
 });
 
 leoneButton.addEventListener('click', () => {
-  // filteredSellers = filterFunction('leone', data);
-  // products(filteredSellers);
   filteredData = filterFunction('leone', data);
+  products(filteredData);
+  resetPrice();
+  sizeSelect.value = 'hide';
+});
+
+buddhaButton.addEventListener('click', () => {
+  filteredData = filterFunction('buddha', data);
   products(filteredData);
   resetPrice();
   sizeSelect.value = 'hide';
@@ -99,7 +107,7 @@ leoneButton.addEventListener('click', () => {
 // ⭐ FILTRO PRICE
 // Añadimos estas dos funciones como contenedores de valores
 // Es importante que juguemos con infinity para que no tengamos problemas con las cantidades
-let maxPrice = -Infinity;
+maxPrice = -Infinity;
 let minPrice = Infinity;
 // Añadimos y ejecutamos el filtro por precio
 const priceFilter = (list) => {
@@ -125,8 +133,8 @@ const filterPriceFunction = (price, info) => {
   return info.filter((item) => item.price <= price);
 };
 
-const rangeInput = document.querySelector('#priceRange');
-const rangeValue = document.querySelector('#rangevalue');
+rangeInput = document.querySelector('#priceRange');
+rangeValue = document.querySelector('#rangevalue');
 rangeInput.addEventListener('input', (price) => {
   // filteredPrice = filterPriceFunction(price.target.value, data);
   // products(filteredPrice);
@@ -140,7 +148,7 @@ rangeInput.addEventListener('input', (price) => {
 const sizeContainer = document.querySelector('.bc__filter__size');
 sizeContainer.innerHTML += `<select name="sizeSelect" id="sizeSelect">
 <option id=hidden value="hide" hidden data-text="Elige">Elige</option></select>`;
-const sizeSelect = document.querySelector('#sizeSelect');
+sizeSelect = document.querySelector('#sizeSelect');
 // Creamos la función para filtrar los productos por talla
 const sizeFilter = (list) => {
   // Usamos esta constante para almacenar los valores
@@ -152,18 +160,8 @@ const sizeFilter = (list) => {
       sizeSelect.innerHTML += `<option value="${details.size}">${details.size}oz</option>`;
     }
   }
-  // console.log(sizeCounter.map());
-  // sizeCounter.map(
-  //   (size) => (sizeSelect.innerHTML += `<option value="${size}">${size}oz</option>`)
-  // );
-  // sizeCounter.sort();
 };
 sizeFilter(data);
-
-// sizeContainer.innerHTML += `<select name="sizeSelect" id="sizeSelect">
-//             <option value="hide">Elige</option>
-//             <option value="8oz">8oz</option>
-//           </select>`;
 
 const filterSizeFunction = (size, info) => {
   return info.filter((item) => item.size == size);

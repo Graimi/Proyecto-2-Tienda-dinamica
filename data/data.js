@@ -136,7 +136,8 @@ const data = [
     seller: 'buddha',
     sellerImg:
       'https://res.cloudinary.com/dwsffp1eq/image/upload/v1678545643/ceres-box/buddha_logo_ysrcz5.svg',
-    productImg: 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1678545743/ceres-box/premium_u4vvir.webp',
+    productImg:
+      'https://res.cloudinary.com/dwsffp1eq/image/upload/v1678545743/ceres-box/premium_u4vvir.webp',
     price: 37,
     size: 16,
     link: 'https://www.buddhafightwear.com/collections/guantes-top-premium-mate-34-90/products/guantes-de-boxeo-muay-thai-kick-boxing-top-premium-negros-mate'
@@ -146,7 +147,8 @@ const data = [
     seller: 'buddha',
     sellerImg:
       'https://res.cloudinary.com/dwsffp1eq/image/upload/v1678545643/ceres-box/buddha_logo_ysrcz5.svg',
-    productImg: 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1678623345/ceres-box/epic_etjpfw.webp',
+    productImg:
+      'https://res.cloudinary.com/dwsffp1eq/image/upload/v1678623345/ceres-box/epic_etjpfw.webp',
     price: 65,
     size: 14,
     link: 'https://www.buddhafightwear.com/collections/guantes/products/guantes-de-boxeo-muay-thai-kick-boxing-epic-blancos-piel'
@@ -156,7 +158,8 @@ const data = [
     seller: 'buddha',
     sellerImg:
       'https://res.cloudinary.com/dwsffp1eq/image/upload/v1678545643/ceres-box/buddha_logo_ysrcz5.svg',
-    productImg: 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1678623346/ceres-box/legend_d0wh1j.webp',
+    productImg:
+      'https://res.cloudinary.com/dwsffp1eq/image/upload/v1678623346/ceres-box/legend_d0wh1j.webp',
     price: 65,
     size: 14,
     link: 'https://www.buddhafightwear.com/collections/guantes-premium-piel/products/copia-de-guantes-de-boxeo-muay-thai-kick-boxing-legend-negro-roto-piel'
@@ -166,7 +169,8 @@ const data = [
     seller: 'buddha',
     sellerImg:
       'https://res.cloudinary.com/dwsffp1eq/image/upload/v1678545643/ceres-box/buddha_logo_ysrcz5.svg',
-    productImg: 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1678623345/ceres-box/top_fight_ru4dnx.webp',
+    productImg:
+      'https://res.cloudinary.com/dwsffp1eq/image/upload/v1678623345/ceres-box/top_fight_ru4dnx.webp',
     price: 34,
     size: 12,
     link: 'https://www.buddhafightwear.com/collections/guantes-top-fight-series-33-90/products/guantes-de-boxeo-muay-thai-kick-boxing-top-fight-negro-oros'
