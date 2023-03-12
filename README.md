@@ -54,6 +54,7 @@
 [] Editar la scrollbar de la página (Ver ChatGPT) <br>
 [] Hacer el filtro fixed en la página <br>
 [] Añadir los moz <br>
+[] Probar https://andy-bell.co.uk/a-modern-css-reset/ <br>
 </ol>
 <br>
 
