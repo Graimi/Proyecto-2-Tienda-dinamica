@@ -1,4 +1,4 @@
-import { filterTemplate, toggleFilterTemplate } from './FilterTemplate.js';
+import { toggleFilterTemplate } from './FilterTemplate.js';
 
 // En este documento crearemos las funciones pertinentes del toggle del filtro haciendo que este aparezca y desaparezca
 // Función para cambiar entre los estados del filter y aplicar sus respectivos valores y estilos
@@ -13,21 +13,21 @@ const toggleFilter = () => {
   let state = true;
 
   // Estilos del filtro cuando está abierto
-  const trueStyles = (section) => {
-    section.style.width = '15rem';
-    section.style.writingMode = 'horizontal-tb';
-    section.style.color = 'var(--bc__color--black)';
-    section.style.padding = 'var(--bc__padding--big)';
+  const trueStyles = (e) => {
+    e.style.width = '15rem';
+    e.style.writingMode = 'horizontal-tb';
+    e.style.color = 'var(--bc__color--black)';
+    e.style.padding = 'var(--bc__padding--big)';
   };
 
   // const falseTemplate = `<h3>FILTROS</h3>`;
   // Estilos del filtro cuando está cerrado
-  const falseStyles = (section) => {
-    section.style.width = '4.5rem';
-    section.style.writingMode = 'vertical-rl';
-    section.style.textOrientation = 'upright';
-    section.style.color = 'var(--bc__color--black)';
-    section.style.padding = '0.5rem';
+  const falseStyles = (e) => {
+    e.style.width = '4.5rem';
+    e.style.writingMode = 'vertical-rl';
+    e.style.textOrientation = 'upright';
+    e.style.color = 'var(--bc__color--black)';
+    e.style.padding = '0.5rem';
   };
 
   const hideFilter = () => {
@@ -35,15 +35,10 @@ const toggleFilter = () => {
     const toggleImage = document.querySelector('.bc__filter__toggle--image');
     if (state) {
       falseStyles(filterContainer);
-      // filterContainer.innerHTML = falseTemplate;
-      // filterContainer.style.display = 'none';
       toggleImage.style.transform = 'rotate(180deg)';
       state = false;
     } else {
       trueStyles(filterContainer);
-      // Invocamos el template del filtro
-      // filterContainer.innerHTML = filterTemplate;
-      // filterContainer.style.display = 'none';
       toggleImage.style.transform = 'rotate(0deg)';
       state = true;
     }

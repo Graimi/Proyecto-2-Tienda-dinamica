@@ -36,8 +36,7 @@ export const sellerTemplate = (seller) =>
 />
 </button>`;
 
-export const sizeOptionTemplate = (size) =>
-  `<option value="${size}">${size}oz</option>`;
+export const sizeOptionTemplate = (size) => `<option value="${size}">${size}oz</option>`;
 
 export const sizeSelectTemplate = `<select name="sizeSelect" id="sizeSelect">
 <option id="hidden" value="hide" hidden data-text="Elige">Elige</option>
