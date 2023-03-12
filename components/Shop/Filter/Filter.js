@@ -1,8 +1,13 @@
 // Aquí añadimos el conjunto de los componentes del filter
 import data from '../../../data/Data.js';
 import products from '../Products/Products.js';
-// import sellerFilters from './SellerMap.js';
-import { filterTemplate, priceTemplate, sellerTemplate } from './FilterTemplate.js';
+import {
+  filterTemplate,
+  priceTemplate,
+  sellerTemplate,
+  sizeOptionTemplate,
+  sizeSelectTemplate
+} from './FilterTemplate.js';
 import toggleFilter from './ToggleFilter.js';
 
 // Añadimos el contenedor de los filtros
@@ -146,8 +151,7 @@ rangeInput.addEventListener('input', (price) => {
 
 // ⭐ FILTRO SIZE
 const sizeContainer = document.querySelector('.bc__filter__size');
-sizeContainer.innerHTML += `<select name="sizeSelect" id="sizeSelect">
-<option id=hidden value="hide" hidden data-text="Elige">Elige</option></select>`;
+sizeContainer.innerHTML += sizeSelectTemplate;
 sizeSelect = document.querySelector('#sizeSelect');
 // Creamos la función para filtrar los productos por talla
 const sizeFilter = (list) => {
@@ -157,7 +161,8 @@ const sizeFilter = (list) => {
     if (!sizeCounter.includes(details.size)) {
       sizeCounter.push(details.size);
       sizeCounter.sort();
-      sizeSelect.innerHTML += `<option value="${details.size}">${details.size}oz</option>`;
+      // sizeSelect.innerHTML += `<option value="${details.size}">${details.size}oz</option>`;
+      sizeSelect.innerHTML += sizeOptionTemplate(details.size);
     }
   }
 };
