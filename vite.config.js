@@ -2,7 +2,7 @@
 export default {
   build: {
     rollupOptions: {
-      external: ['/data/Data.js']
+      external: ['../../../data/Data.js']
     }
   }
 };
