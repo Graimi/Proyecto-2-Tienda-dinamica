@@ -1,4 +1,7 @@
 // Aquí añadimos el conjunto de los componentes del filter
+
+import './Filter.css';
+
 import data from '../../../data/Data.js';
 import products from '../Products/Products.js';
 import {
@@ -169,6 +172,7 @@ const sizeFilter = (list) => {
 sizeFilter(data);
 
 const filterSizeFunction = (size, info) => {
+  // eslint-disable-next-line eqeqeq
   return info.filter((item) => item.size == size);
 };
 

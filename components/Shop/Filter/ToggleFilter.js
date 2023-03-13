@@ -12,34 +12,19 @@ const toggleFilter = () => {
   // Declaramos esta variable que nos serirá de base para el estado del toggle
   let state = true;
 
-  // Estilos del filtro cuando está abierto
-  const trueStyles = (e) => {
-    e.style.width = '15rem';
-    e.style.writingMode = 'horizontal-tb';
-    e.style.padding = 'var(--bc__padding--big)';
-  };
-
-  // const falseTemplate = `<h3>FILTROS</h3>`;
-  // Estilos del filtro cuando está cerrado
-  const falseStyles = (e) => {
-    e.style.width = '4.5rem';
-    e.style.writingMode = 'vertical-rl';
-    e.style.textOrientation = 'upright';
-    e.style.padding = '0.5rem';
-  };
-
   const hideFilter = () => {
+    // Buscamos los contenedores
     const filterContainer = document.querySelector('.bc__section__filter');
     const toggleImage = document.querySelector('.bc__filter__toggle--image');
     if (state) {
-      // falseStyles(filterContainer);
-      toggleImage.style.transform = 'rotate(180deg)';
-      filterContainer.classList.toggle('hidden');
+      // Usamos la función toggle para aplicar estilos específicos definidos en css al cambiar la clase
+      toggleImage.classList.toggle('hidden__toggle');
+      filterContainer.classList.toggle('hidden__filter');
       state = false;
     } else {
-      // trueStyles(filterContainer);
-      toggleImage.style.transform = 'rotate(0deg)';
-      filterContainer.classList.toggle('hidden');
+      // Devolvemos los estilos orginales
+      toggleImage.classList.toggle('hidden__toggle');
+      filterContainer.classList.toggle('hidden__filter');
       state = true;
     }
   };

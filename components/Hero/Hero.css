@@ -52,12 +52,12 @@
   /* ✅ */
   /* Se aumenta tamaño hero para compensar el header más pequeño*/
   .bc__section__hero {
-    min-height: 91vh;
+    min-height: 100vh;
   }
 
   /* Se reduce el tamaño del logo */
   .bc__hero__logo {
-    width: 8rem;
+    width: 13rem;
   }
 
   /* Se reduce el tamaño del texto */
@@ -68,7 +68,7 @@
 
   /* Se reduce el tamaño del CTA */
   .bc__hero__CTA {
-    font-size: calc(var(--bc__typography--size--h3) - 0.25rem);
+    font-size: calc(var(--bc__typography--size--h3) - 0.1rem);
   }
 
   /* Se reduce el tamaño del icono next */
@@ -82,18 +82,19 @@
   /* ✅ */
   /* Se reduce el tamaño del logo */
   .bc__hero__logo {
-    width: 7rem;
+    margin-top: 5rem;
+    width: 10.5rem;
   }
 
   /* Se reduce el tamaño del texto */
   .bc__hero__description {
-    font-size: calc(var(--bc__typography--size--extra) - 2rem);
+    font-size: calc(var(--bc__typography--size--extra) - 1.5rem);
     font-weight: var(--bc__typography--weight--500);
   }
 
   /* Se reduce el tamaño del CTA */
   .bc__hero__CTA {
-    font-size: calc(var(--bc__typography--size--h3) - 0.48rem);
+    font-size: calc(var(--bc__typography--size--h3) - 0.2rem);
   }
 
   /* Se reduce el tamaño del next */

@@ -1,0 +1,317 @@
+/* --✅2.MAIN------------------------------------------------------------------------ */
+/* Se establece el color de fondo del main */
+.bc__section__main {
+    background-color: var(--bc__color--white);
+  }
+  
+  /* 2.2.SHOP */
+  #shop {
+    align-items: flex-start;
+  }
+  
+  /* 2.2.1 Filter */
+  /* Diseños generales del filtro */
+  #filter {
+    padding-top: calc(var(--bc__height--header) + var(--bc__padding--medium));
+    z-index: 1;
+  }
+  
+  /* Diseños generales para cada filtro */
+  .bc__section__filter {
+    padding: var(--bc__padding--big);
+    background-color: var(--bc__color--white--light);
+    border-radius: var(--bc__border__radius--filter);
+    text-align: center;
+    width: 15rem;
+    height: var(--bc__height--card);
+    transition: cubic-bezier(0.2, 0.5, 0.1, 1) 1s;
+  }
+  
+  /* Los estilos para el toggle del filtro versión desktop */
+  .hidden__filter {
+    /* writing-mode: horizontal-tb; */
+    width: 4.5rem;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding: var(--bc__padding--small);
+  }
+  
+  /* Margen entre cada uno de los filtros */
+  .bc__section__filter > div {
+    margin: 0.8rem;
+    padding: 0.3rem;
+  }
+  
+  /* Decoración para el título de filtro */
+  .bc__filter__title {
+    text-transform: uppercase;
+    color: var(--bc__color--black);
+    background-color: var(--bc__color--white--light);
+    margin: var(--bc__margin--filter);
+    transition: all 0.5s;
+    font-size: var(--bc__typography--size--h2);
+    font-weight: var(--bc__typography--weight--500);
+  }
+  
+  /* Decoración de las letras específicas de los títulos de los filtros */
+  .bc__filter__brand > h2,
+  .bc__filter__price > h2,
+  .bc__filter__size > h2 {
+    -webkit-text-stroke: var(--bc__text__stroke--black);
+    color: var(--bc__color--white--light);
+    text-transform: uppercase;
+  }
+  
+  /* Diseño para que haya espacio entre los logos */
+  .bc__filter__brand--img {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  /* Diseños para los botones del filtro por marca */
+  .bc__filter__brand--img > button {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    padding-top: var(--bc__padding--small);
+  }
+  
+  .bc__filter__brand--img > button :hover {
+    scale: 1.1;
+  }
+  
+  .bc__filter__brand--img > button > img {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.2rem;
+  }
+  
+  /* Diseños para el filtro por precio tipo input */
+  .bc__filter__price--details {
+    display: flex;
+    justify-content: space-between;
+    color: var(--bc__color--black);
+    font-weight: var(--bc__typography--weight--300);
+    margin-top: 0.5rem;
+  }
+  
+  /* Damos importancia a la cantidad central con un mayor weight */
+  .bc__filter__price--details > output {
+    font-weight: var(--bc__typography--weight--500);
+  }
+  
+  /* Estilos para el rango de precios */
+  #priceRange {
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  
+  /* Características especiales para chrome */
+  #priceRange::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 0.2rem;
+    border-radius: 5rem;
+    background: var(--bc__color--black);
+    cursor: grabbing;
+  }
+  
+  #priceRange::-webkit-slider-thumb {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-top: -0.65rem;
+    -webkit-appearance: none;
+    cursor: grabbing;
+    /* Seleccionamos la imagen que hará de desplazador */
+    background: url('https://res.cloudinary.com/dwsffp1eq/image/upload/v1678441830/ceres-box/rec_cshkns.png');
+  }
+  
+  #priceRange:focus::-webkit-slider-runnable-track {
+    background: var(--bc__color--black);
+  }
+  
+  /* Características especiales para firefox */
+  #priceRange::-moz-range-track {
+    width: 100%;
+    height: 0.2rem;
+    border-radius: 5rem;
+    background: var(--bc__color--black);
+    cursor: grabbing;
+  }
+  
+  #priceRange::-moz-range-thumb {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-top: -0.65rem;
+    appearance: none;
+    cursor: grabbing;
+    border: none;
+    background: url('https://res.cloudinary.com/dwsffp1eq/image/upload/v1678441830/ceres-box/rec_cshkns.png');
+  }
+  
+  /* Diseños para el filtro de tamaño tipo select */
+  #sizeSelect {
+    margin-top: 0.5rem;
+    width: 5.5rem;
+    height: 2.5rem;
+    padding: 0rem 0.8rem 0rem 0.8rem;
+    border: none;
+    border-radius: 50rem;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Seleccionamos la imagen que hará de flecha y le damos propiedades */
+    background: url('https://res.cloudinary.com/dwsffp1eq/image/upload/v1678105109/ceres-box/toggle__black_yjozkb.png')
+      no-repeat 3.5rem / 1.375rem 0.875rem;
+    background-color: var(--bc__color--white);
+    color: var(--bc__color--black);
+    font-weight: var(--bc__typography--weight--500);
+    font-size: var(--bc__typography--size--p);
+  }
+  
+  /* Efecto sobre el select para motivar el click */
+  #sizeSelect:hover {
+    border: 0.1rem solid var(--bc__color--black);
+  }
+  
+  /* Color de fondo de las opciones desplegadas */
+  #sizeSelect option {
+    background-color: var(--bc__color--white);
+  }
+  
+  /* Decoración del botón para borrar el filtro */
+  .bc__filter__remove--button {
+    text-transform: uppercase;
+    color: var(--bc__color--white--light);
+    background-color: var(--bc__color--black);
+    padding: 0.5rem;
+    border: 0.15rem solid var(--bc__color--black);
+    border-radius: var(--bc__border__radius--small);
+    transition: all 0.5s;
+    margin: var(--bc__margin--filter);
+    font-size: 1rem;
+    font-weight: var(--bc__typography--weight--700);
+  }
+  
+  /* Diseños cuando se hace hover sobre el botón de borrado */
+  .bc__filter__remove :hover {
+    transform: translateY(-0.2rem);
+    box-shadow: var(--bc__color--grey) 0 0.3rem 0.5rem;
+  }
+  
+  /* Decoración general del toggle */
+  .bc__filter__toggle--button {
+    background-color: var(--bc__color--black);
+    width: 3rem;
+    height: 4rem;
+    border-radius: var(--bc__border__radius--filter--desktop);
+    cursor: pointer;
+  }
+  
+  /* Efecto al toggle */
+  .bc__filter__toggle--image {
+    transition: all 1s;
+  }
+  
+  /* Con esta propiedad giramos el icono */
+  .hidden__toggle {
+    transform: rotate(180deg);
+  }
+  
+  /* --🟨5.MEDIA QUERIES------------------------------------------------------------------------ */
+  
+  /* TABLET DISPLAY */
+  @media screen and (min-width: 23.5rem) and (max-width: 48rem) {
+    /* A continuación damos los estilos específicos para que el filtro se adapte a la tablet */
+    #shop {
+      flex-direction: column;
+    }
+  
+    #filter {
+      flex-direction: column;
+      padding: 0;
+      width: 100%;
+      transition: cubic-bezier(0.2, 0.5, 0.1, 1) 1s;
+    }
+  
+    .bc__section__filter {
+      padding: 1rem 4rem 1rem 4rem;
+      border-radius: var(--bc__border__radius--filter--mobile);
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+  
+    .hidden__filter {
+      writing-mode: horizontal-tb;
+      height: 4rem;
+      text-orientation: upright;
+      padding: var(--bc__padding--medium);
+    }
+  
+    .bc__filter__toggle--button {
+      background-color: var(--bc__color--black);
+      width: 4rem;
+      height: 3rem;
+      border-radius: var(--bc__border__radius--filter--mobile);
+    }
+  
+    /* Efecto al toggle */
+    .bc__filter__toggle--image {
+      transform: rotate(90deg);
+    }
+  
+    .hidden__toggle {
+      transform: rotate(270deg);
+    }
+  }
+  
+  /* MOBILE DISPLAY */
+  @media screen and (max-width: 23.5rem) {
+    /* Estos estilos espcíficos para móviles son practicamente los mismos excepto algún margen */
+    #shop {
+      flex-direction: column;
+    }
+  
+    #filter {
+      flex-direction: column;
+      padding: 0;
+      width: 100%;
+    }
+  
+    .bc__section__filter {
+      padding: 1rem 2.5rem 1rem 2.5rem;
+      border-radius: var(--bc__border__radius--filter--mobile);
+      width: 100%;
+      height: auto;
+      transition: cubic-bezier(0.2, 0.5, 0.1, 1) 1s;
+      overflow: hidden;
+    }
+  
+    .hidden__filter {
+      writing-mode: horizontal-tb;
+      height: 4rem;
+      text-orientation: upright;
+      padding: var(--bc__padding--medium);
+    }
+  
+    .bc__filter__toggle--button {
+      background-color: var(--bc__color--black);
+      width: 4rem;
+      height: 3rem;
+      border-radius: var(--bc__border__radius--filter--mobile);
+    }
+  
+    /* Efecto al toggle */
+    .bc__filter__toggle--image {
+      transform: rotate(90deg);
+    }
+  
+    .hidden__toggle {
+      transform: rotate(270deg);
+    }
+  }

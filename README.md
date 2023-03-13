@@ -48,7 +48,7 @@
 <li> [] CSS </li>
 [✅] nav fija en parte superior <br>
 [✅] Diseño invisible nav <br>
-[] Ver como diseñar nav bar en medias queries <br>
+[] Añadir toggle al hamburguer para colorear la nav bar en medias queries <br>
 [✅] Img header: corrediza <br>
 [] Hacer el filtro fixed en la página <br>
 [] Filtro de los productos con sus respectivas medias queries <br>
