@@ -45,7 +45,7 @@
 
   /* MARGIN */
   --bc__margin--small: 0.5rem;
-  --bc__margin--filter: 0.3rem 0rem 0.3rem 0rem;
+  --bc__margin--filter: 0.3rem 1rem 0.3rem 1rem;
 
   /* GAP */
   --bc__gap--small: 0.7rem;
@@ -170,8 +170,6 @@ li {
 
 /* Diseños generales para cada filtro */
 .bc__section__filter {
-  /* display: flex;
-  flex-direction: column; */
   padding: var(--bc__padding--big);
   background-color: var(--bc__color--white--light);
   border-radius: var(--bc__border__radius--filter);
@@ -196,7 +194,6 @@ li {
   transition: all 0.5s;
   font-size: var(--bc__typography--size--h2);
   font-weight: var(--bc__typography--weight--500);
-  /* text-decoration: underline; */
 }
 
 /* Decoración de las letras específicas de los títulos de los filtros */
