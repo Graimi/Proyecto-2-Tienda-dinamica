@@ -1,15 +1,14 @@
-/* --✅2.MAIN------------------------------------------------------------------------ */
+/* ✅ */
 /* Se establece el color de fondo del main */
 .bc__section__main {
     background-color: var(--bc__color--white);
   }
   
-  /* 2.2.SHOP */
   #shop {
     align-items: flex-start;
   }
   
-  /* 2.2.1 Filter */
+  /* ✅ FILTER */
   /* Diseños generales del filtro */
   #filter {
     padding-top: calc(var(--bc__height--header) + var(--bc__padding--medium));
