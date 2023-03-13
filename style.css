@@ -31,9 +31,9 @@
   --bc__typography--spacing--content: 0.05rem;
 
   /* TEXT STROKE STYLE */
-  --bc__text__stroke--white: 0.01em var(--bc__color--white);
+  --bc__text__stroke--white: 0.03rem var(--bc__color--white);
   --bc__text__stroke--black: 0.04rem var(--bc__color--black);
-  --bc__text__stroke--yellow: 0.04rem var(--bc__color--yellow);
+  --bc__text__stroke--yellow: 0.055rem var(--bc__color--yellow);
 
   /* GENERAL STYLE */
   --bc__style--none: none;
@@ -251,6 +251,7 @@ li {
   width: 100%;
   appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
 }
 #priceRange::-webkit-slider-runnable-track {
   width: 100%;
@@ -289,6 +290,7 @@ li {
   margin-top: -0.65rem;
   appearance: none;
   cursor: grabbing;
+  border: none;
   background: url('https://res.cloudinary.com/dwsffp1eq/image/upload/v1678441830/ceres-box/rec_cshkns.png');
 }
 
@@ -330,6 +332,7 @@ li {
   color: var(--bc__color--black);
   background-color: var(--bc__color--white--light);
   padding: 0.5rem;
+  border: 0.23rem double;
   /* margin-top: 1rem; */
   transition: all 0.5s;
   margin: var(--bc__margin--filter);

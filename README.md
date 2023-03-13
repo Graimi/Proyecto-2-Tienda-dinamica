@@ -32,7 +32,7 @@
 [✅] Usar fuente collegue block 2 (descargada) <br>
 [✅] Añadir logo original <br>
 <li> [] JAVASCRIPT </li>
-[] Crear las respectivas carpetas generales para almacenar los componentes y pages del protecto <br>
+[✅] Crear las respectivas carpetas generales para almacenar los componentes del protecto <br>
 [✅] Crear invisible nav <br>
 [✅] Header pasado a JS <br>
 [✅] Lista de productos <br>
@@ -40,9 +40,10 @@
 [] Main pasado a JS <br>
 [] Identificar los nuevos componentes a añadir <br>
 [✅] Footer pasado a JS <br>
-[] Botón de borrar filtros correcto, el de precio no se repone <br>
+[] Botón de borrar filtros correcto, al pinchar tamaño se reinicie precio <br>
+[] Ordenar los diferentes tamaños del filtro <br>
 [] Hacer que los filtros sean responsives entre ellos <br>
-[] Meter un seller más <br>
+[✅] Meter un seller más <br>
 <li> [] HTML </li>
 [✅] Header nombre gym con enlace al inicio de la web <br>
 [] Limpiar y organizar el código innecesario <br>

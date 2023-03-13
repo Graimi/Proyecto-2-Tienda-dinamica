@@ -160,10 +160,10 @@ const sizeFilter = (list) => {
   for (const details of list) {
     if (!sizeCounter.includes(details.size)) {
       sizeCounter.push(details.size);
-      sizeCounter.sort();
-      // sizeSelect.innerHTML += `<option value="${details.size}">${details.size}oz</option>`;
+      
       sizeSelect.innerHTML += sizeOptionTemplate(details.size);
     }
+    sizeCounter.sort();
   }
 };
 sizeFilter(data);
