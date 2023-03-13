@@ -16,7 +16,6 @@ const toggleFilter = () => {
   const trueStyles = (e) => {
     e.style.width = '15rem';
     e.style.writingMode = 'horizontal-tb';
-    e.style.color = 'var(--bc__color--black)';
     e.style.padding = 'var(--bc__padding--big)';
   };
 
@@ -26,7 +25,6 @@ const toggleFilter = () => {
     e.style.width = '4.5rem';
     e.style.writingMode = 'vertical-rl';
     e.style.textOrientation = 'upright';
-    e.style.color = 'var(--bc__color--black)';
     e.style.padding = '0.5rem';
   };
 
@@ -34,12 +32,14 @@ const toggleFilter = () => {
     const filterContainer = document.querySelector('.bc__section__filter');
     const toggleImage = document.querySelector('.bc__filter__toggle--image');
     if (state) {
-      falseStyles(filterContainer);
+      // falseStyles(filterContainer);
       toggleImage.style.transform = 'rotate(180deg)';
+      filterContainer.classList.toggle('hidden');
       state = false;
     } else {
-      trueStyles(filterContainer);
+      // trueStyles(filterContainer);
       toggleImage.style.transform = 'rotate(0deg)';
+      filterContainer.classList.toggle('hidden');
       state = true;
     }
   };
