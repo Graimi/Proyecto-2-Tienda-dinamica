@@ -2,7 +2,7 @@
 
 import './Filter.css';
 
-import data from '../../../data/Data';
+import data from '../../../src/data/Data.js';
 import products from '../Products/Products.js';
 import {
   filterTemplate,
