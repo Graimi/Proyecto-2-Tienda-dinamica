@@ -19,7 +19,8 @@ const invisibleNav = () => {
   // Se ha añadido el 80 para que la navbar aparezca tan pronto como se mueva la venta para no superponer los datos
   if (window.scrollY * 80 > heroSection.offsetHeight) {
     navBar.style.backgroundColor = 'var(--bc__color--black)';
-  } else {
+  }
+  if (window.scrollY * 80 < heroSection.offsetHeight) {
     navBar.style.backgroundColor = 'transparent';
   }
 };
@@ -28,8 +29,9 @@ const functionInvisibleNav = window.addEventListener('scroll', invisibleNav);
 // Creamos la siguiente función para que no se vean en transparente las opciones cuando pinchemos en la hamburguesa
 const hamburger = document.querySelector('.bc__hamburguer__label');
 const hamburgerToggle = () => {
-  navBar.classList.toggle('toggle__hamburguer');
+  navBar.style.backgroundColor = 'var(--bc__color--black)';
 };
+
 hamburger.addEventListener('click', hamburgerToggle);
 
 export default functionInvisibleNav;

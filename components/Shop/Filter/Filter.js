@@ -181,6 +181,7 @@ sizeSelect.addEventListener('input', (size) => {
   // products(filteredSize);
   filteredData = filterSizeFunction(size.target.value, data);
   products(filteredData);
+  resetPrice();
 });
 
 // PROBAR PONIENDO SOLO FILEREDSELLERS

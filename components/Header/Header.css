@@ -82,11 +82,6 @@
   color: var(--bc__color--transparent);
 }
 
-/* Para devolver el color a las opciones de la navbar cuando se despleguen */
-.toggle__hamburguer {
-  background-color: var(--bc__color--black);
-}
-
 /* TABLET DISPLAY */
 @media screen and (min-width: 23.5rem) and (max-width: 48rem) {
   /* ✅ */
