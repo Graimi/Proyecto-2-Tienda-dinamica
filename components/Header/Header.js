@@ -24,7 +24,7 @@ const invisibleNav = () => {
     navBar.style.backgroundColor = 'transparent';
   }
 };
-const functionInvisibleNav = window.addEventListener('scroll', invisibleNav);
+const functionInvisibleNav = () => window.addEventListener('scroll', invisibleNav);
 
 // Creamos la siguiente función para que no se vean en transparente las opciones cuando pinchemos en la hamburguesa
 const hamburger = document.querySelector('.bc__hamburguer__label');

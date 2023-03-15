@@ -163,10 +163,8 @@ const sizeFilter = (list) => {
   for (const details of list) {
     if (!sizeCounter.includes(details.size)) {
       sizeCounter.push(details.size);
-
       sizeSelect.innerHTML += sizeOptionTemplate(details.size);
     }
-    sizeCounter.sort();
   }
 };
 sizeFilter(data);
@@ -198,4 +196,4 @@ removeButton.addEventListener('click', () => {
   sizeSelect.value = 'hide';
 });
 
-export default filter();
+export default filter;
