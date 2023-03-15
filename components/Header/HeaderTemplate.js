@@ -10,7 +10,7 @@ const headerTemplate = (header) => `<div class="bc__section__header__layout bc__
       <a class="bc__navbar__inicio" href="#hero">Inicio</a>
     </li>
     <li>
-      <a class="bc__navbar__shop" href="#shop">Tienda</a>
+      <a class="bc__navbar__shop" href="#next">Tienda</a>
     </li>
     <li>
       <a

@@ -4,7 +4,7 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     min-height: var(--bc__height--full--screen);
-    padding: calc(var(--bc__height--header) + var(--bc__padding--medium)) var(--bc__padding--medium);
+    padding: var(--bc__padding--shop);
     gap: var(--bc__gap--big);
   }
   

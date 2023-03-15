@@ -11,7 +11,7 @@
   /* ✅ FILTER */
   /* Diseños generales del filtro */
   #filter {
-    padding-top: calc(var(--bc__height--header) + var(--bc__padding--medium));
+    padding: var(--bc__padding--shop);
     z-index: 1;
   }
   
